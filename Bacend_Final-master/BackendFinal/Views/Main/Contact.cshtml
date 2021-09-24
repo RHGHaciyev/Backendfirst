@@ -1,0 +1,144 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+@using BackendFinal.Models;
+@{
+    ViewBag.Title = "Contact";
+}
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+            <div class="bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 hidden-xs">
+                            <div class="breaking">
+                                <span>Qaynar Xəbərlər:</span>
+                                <p class='heading'>
+                                    <span id='dynamicText'></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="pull-right options">
+                                <a href="#" class="subscribe">Abunə ol</a>
+                                <span>|</span>
+                                <a href="#" class="login">Qeydiyyat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="~/Public/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <!-- ===============.=======CONTENT================ -->
+        <div class="container margin-top-30">
+            <div class="row">
+                <!-- ========================== Path =========================== -->
+                <div id="breadcrumbs" class="stuck_position">
+                    <div class="container">
+                        <div class="row">
+                            <div class="moduletable   col-sm-12">
+                                <div class="module_container">
+                                    <ul class="breadcrumb">
+                                        <li><a href="/joomla_64017/index.php" class="pathway">Baş səhifə</a></li>
+                                        <li class="active"><span>Əlaqə</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========================== Conatact Us =========================== -->
+                <section id="contact-us">
+                    <div class="wrap">
+                        <!--left pannel start-->
+                        <div class="pannel-left">
+                            <h1>Bizə yazın</h1>
+                            <h3>Bütün formaları doldurmağınız xahiş olunur</h3>
+                            <div class="contact-form margin-top-30    ">
+                                <form method="POST" action="" accept-charset="UTF-8">
+                                    <input name="_token" type="hidden" value="O1wa28w6F6og1R1OmlBPJl1I9stDF0DTEuoNotX1">
+                                    <input type="hidden" name="_token" value="O1wa28w6F6og1R1OmlBPJl1I9stDF0DTEuoNotX1">
+                                    <input type="text" required placeholder="Ad" name="name" class="contact-form-field">
+                                    <input type="email" required placeholder="Email" class="contact-form-field" name="email">
+                                    <textarea required placeholder="Measjınız" id="comments" class="contact-form-field" name="comments"></textarea>
+                                    <a href="#" class="sent">Göndər</a>
+                                </form>
+                                <strong><font color="green"></font></strong>
+                            </div>
+                        </div>
+                        <!--left pannel end-->
+                        <!--left pannel start-->
+                        <div class="pannel-right">
+                            <h3>Əlaqə:</h3>
+                            <p>
+                                Təklif və iradlarınız üçün:
+                                <br>Email us at <a href="#" target="_blank">rustemlifiruze@gmail.com</a>
+                            </p>
+                            <p>
+                                <br>
+                                <strong>News AZ</strong>
+                                <br>Baku Azerbaijan,
+                                <br>AF Buisness House
+                                <br>2nd floor
+                            </p>
+                            <p>
+                                <br>
+                                <strong>Web News AZ</strong>
+                                <br>Baku Azerbaijan,
+                                <br>AF Buisness House
+                                <br>2nd floor
+                            </p>
+                        </div>
+                        <!--left pannel end-->
+                    </div>
+                </section>
+                <!--contact us page end-->
+            </div>
+        </div>

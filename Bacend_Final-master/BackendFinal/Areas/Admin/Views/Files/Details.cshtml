@@ -1,0 +1,40 @@
+﻿@model BackendFinal.Models.File
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h2>Details</h2>
+<div>
+    <h4>File</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.file_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.file_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.file_type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.file_type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.file_size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.file_size)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.file_path)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.file_path)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

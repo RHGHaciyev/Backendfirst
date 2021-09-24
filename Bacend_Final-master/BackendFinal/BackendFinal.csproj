@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71631B42-B85D-487C-AFC2-5FC14A301AEA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackendFinal</RootNamespace>
+    <AssemblyName>BackendFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AppliesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\C_News_categoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FilesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuestionsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SiteSettingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ForregstrController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Filter\LoginFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft\AspNet.cs" />
+    <Compile Include="Models\Blog_item.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Blog_item_tofile.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\category.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\content.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C_News_category.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\exchange.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\File.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\filled_contents.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Models.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Models.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Models.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registr.cs" />
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Team.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\type.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserLog.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_reg.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_rol.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Type.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\sb-admin.css" />
+    <Content Include="Assets\css\sb-admin.min.css" />
+    <Content Include="Assets\js\sb-admin-charts.js" />
+    <Content Include="Assets\js\sb-admin-charts.min.js" />
+    <Content Include="Assets\js\sb-admin-datatables.js" />
+    <Content Include="Assets\js\sb-admin-datatables.min.js" />
+    <Content Include="Assets\js\sb-admin.js" />
+    <Content Include="Assets\js\sb-admin.min.js" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Assets\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Assets\vendor\chart.js\Chart.js" />
+    <Content Include="Assets\vendor\chart.js\Chart.min.js" />
+    <Content Include="Assets\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Assets\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Assets\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Assets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Assets\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Assets\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Assets\vendor\jquery\jquery.js" />
+    <Content Include="Assets\vendor\jquery\jquery.min.js" />
+    <Content Include="bin\BackendFinal.dll" />
+    <Content Include="bin\BackendFinal.pdb" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Models\Models.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Models.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Models.cs</LastGenOutput>
+    </Content>
+    <Content Include="Public\asset\css\animation.css" />
+    <Content Include="Public\asset\css\design.css" />
+    <Content Include="Public\asset\css\responsive.css" />
+    <Content Include="Public\asset\css\responsive.min.css" />
+    <Content Include="Public\asset\css\slicknav.css" />
+    <Content Include="Public\asset\css\style.css" />
+    <Content Include="Public\asset\css\style.min.css" />
+    <Content Include="Public\asset\css\superfish.css" />
+    <Content Include="Public\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="Public\images\Add\300x250-2.jpg" />
+    <Content Include="Public\images\Add\300x250.jpg" />
+    <Content Include="Public\images\Add\468x60.jpg" />
+    <Content Include="Public\images\Add\728x90.jpg" />
+    <Content Include="Public\images\author.png" />
+    <Content Include="Public\images\comments\avatar.png" />
+    <Content Include="Public\images\comments\avatar2.png" />
+    <Content Include="Public\images\criminal\1.jpeg" />
+    <Content Include="Public\images\criminal\10.jpeg" />
+    <Content Include="Public\images\criminal\11.jpg" />
+    <Content Include="Public\images\criminal\12.jpeg" />
+    <Content Include="Public\images\criminal\13.jpg" />
+    <Content Include="Public\images\criminal\14.jpg" />
+    <Content Include="Public\images\criminal\15.jpeg" />
+    <Content Include="Public\images\criminal\16.jpeg" />
+    <Content Include="Public\images\criminal\17.jpeg" />
+    <Content Include="Public\images\criminal\18.jpeg" />
+    <Content Include="Public\images\criminal\18.jpg" />
+    <Content Include="Public\images\criminal\19.jpeg" />
+    <Content Include="Public\images\criminal\2.jpeg" />
+    <Content Include="Public\images\criminal\20.jpeg" />
+    <Content Include="Public\images\criminal\21.jpg" />
+    <Content Include="Public\images\criminal\22.jpeg" />
+    <Content Include="Public\images\criminal\23.jpeg" />
+    <Content Include="Public\images\criminal\24.jpeg" />
+    <Content Include="Public\images\criminal\25.jpg" />
+    <Content Include="Public\images\criminal\26.jpeg" />
+    <Content Include="Public\images\criminal\27.jpeg" />
+    <Content Include="Public\images\criminal\28.jpeg" />
+    <Content Include="Public\images\criminal\29.jpeg" />
+    <Content Include="Public\images\criminal\3.jpeg" />
+    <Content Include="Public\images\criminal\30.jpeg" />
+    <Content Include="Public\images\criminal\31.jpeg" />
+    <Content Include="Public\images\criminal\32.jpeg" />
+    <Content Include="Public\images\criminal\33.jpeg" />
+    <Content Include="Public\images\criminal\34.jpeg" />
+    <Content Include="Public\images\criminal\35.jpeg" />
+    <Content Include="Public\images\criminal\36.png" />
+    <Content Include="Public\images\criminal\37.jpeg" />
+    <Content Include="Public\images\criminal\38.jpeg" />
+    <Content Include="Public\images\criminal\39.jpeg" />
+    <Content Include="Public\images\criminal\4.jpeg" />
+    <Content Include="Public\images\criminal\40.jpeg" />
+    <Content Include="Public\images\criminal\41.jpeg" />
+    <Content Include="Public\images\criminal\42.jpeg" />
+    <Content Include="Public\images\criminal\43.jpeg" />
+    <Content Include="Public\images\criminal\44.jpeg" />
+    <Content Include="Public\images\criminal\45.jpeg" />
+    <Content Include="Public\images\criminal\46.jpeg" />
+    <Content Include="Public\images\criminal\47.jpeg" />
+    <Content Include="Public\images\criminal\48.jpeg" />
+    <Content Include="Public\images\criminal\49.jpeg" />
+    <Content Include="Public\images\criminal\5.jpeg" />
+    <Content Include="Public\images\criminal\50.jpeg" />
+    <Content Include="Public\images\criminal\51.jpeg" />
+    <Content Include="Public\images\criminal\6.jpeg" />
+    <Content Include="Public\images\criminal\7.jpeg" />
+    <Content Include="Public\images\criminal\8.jpg" />
+    <Content Include="Public\images\criminal\9.jpeg" />
+    <Content Include="Public\images\economy\01.jpeg" />
+    <Content Include="Public\images\economy\02.jpeg" />
+    <Content Include="Public\images\economy\03.jpeg" />
+    <Content Include="Public\images\economy\04.jpg" />
+    <Content Include="Public\images\economy\05.jpg" />
+    <Content Include="Public\images\economy\06.jpg" />
+    <Content Include="Public\images\economy\07.jpeg" />
+    <Content Include="Public\images\economy\08.jpeg" />
+    <Content Include="Public\images\economy\09.jpeg" />
+    <Content Include="Public\images\economy\10.jpeg" />
+    <Content Include="Public\images\economy\11.jpeg" />
+    <Content Include="Public\images\economy\12.jpeg" />
+    <Content Include="Public\images\economy\13.jpeg" />
+    <Content Include="Public\images\economy\14.jpeg" />
+    <Content Include="Public\images\economy\15.jpeg" />
+    <Content Include="Public\images\economy\16.jpeg" />
+    <Content Include="Public\images\economy\17.jpeg" />
+    <Content Include="Public\images\economy\18.jpeg" />
+    <Content Include="Public\images\economy\19.jpeg" />
+    <Content Include="Public\images\economy\20.jpeg" />
+    <Content Include="Public\images\economy\21.jpeg" />
+    <Content Include="Public\images\economy\22.jpeg" />
+    <Content Include="Public\images\economy\23.jpeg" />
+    <Content Include="Public\images\economy\24.jpeg" />
+    <Content Include="Public\images\economy\25.jpeg" />
+    <Content Include="Public\images\economy\26.jpeg" />
+    <Content Include="Public\images\economy\27.jpeg" />
+    <Content Include="Public\images\economy\28.jpeg" />
+    <Content Include="Public\images\economy\29.jpeg" />
+    <Content Include="Public\images\economy\30.jpeg" />
+    <Content Include="Public\images\economy\31.jpeg" />
+    <Content Include="Public\images\economy\32.png" />
+    <Content Include="Public\images\economy\33.jpeg" />
+    <Content Include="Public\images\economy\p1.jpg" />
+    <Content Include="Public\images\economy\p2.jpg" />
+    <Content Include="Public\images\economy\p3.jpg" />
+    <Content Include="Public\images\economy\p4.jpg" />
+    <Content Include="Public\images\economy\p5.jpeg" />
+    <Content Include="Public\images\flogo.png" />
+    <Content Include="Public\images\flogo2.png" />
+    <Content Include="Public\images\healthy\1.jpg" />
+    <Content Include="Public\images\healthy\10.jpeg" />
+    <Content Include="Public\images\healthy\11.jpeg" />
+    <Content Include="Public\images\healthy\12.jpg" />
+    <Content Include="Public\images\healthy\13.jpeg" />
+    <Content Include="Public\images\healthy\14.jpg" />
+    <Content Include="Public\images\healthy\15.jpg" />
+    <Content Include="Public\images\healthy\16.jpeg" />
+    <Content Include="Public\images\healthy\17.jpeg" />
+    <Content Include="Public\images\healthy\18.jpg" />
+    <Content Include="Public\images\healthy\19.jpeg" />
+    <Content Include="Public\images\healthy\2.jpg" />
+    <Content Include="Public\images\healthy\20.jpeg" />
+    <Content Include="Public\images\healthy\21.jpg" />
+    <Content Include="Public\images\healthy\22.jpg" />
+    <Content Include="Public\images\healthy\23.jpg" />
+    <Content Include="Public\images\healthy\24.jpg" />
+    <Content Include="Public\images\healthy\25.jpg" />
+    <Content Include="Public\images\healthy\26.jpg" />
+    <Content Include="Public\images\healthy\27.jpg" />
+    <Content Include="Public\images\healthy\28.jpeg" />
+    <Content Include="Public\images\healthy\29.jpeg" />
+    <Content Include="Public\images\healthy\3.jpg" />
+    <Content Include="Public\images\healthy\4.jpg" />
+    <Content Include="Public\images\healthy\5.jpg" />
+    <Content Include="Public\images\healthy\6.jpg" />
+    <Content Include="Public\images\healthy\7.jpg" />
+    <Content Include="Public\images\healthy\8.jpeg" />
+    <Content Include="Public\images\healthy\9.jpeg" />
+    <Content Include="Public\images\Icon\comment.png" />
+    <Content Include="Public\images\Icon\comment2.png" />
+    <Content Include="Public\images\Icon\eye.png" />
+    <Content Include="Public\images\Icon\eye2.png" />
+    <Content Include="Public\images\Icon\gallery2.png" />
+    <Content Include="Public\images\Icon\mail.png" />
+    <Content Include="Public\images\Icon\play.png" />
+    <Content Include="Public\images\Icon\star-full.png" />
+    <Content Include="Public\images\Icon\star-half.png" />
+    <Content Include="Public\images\Icon\tick.png" />
+    <Content Include="Public\images\Icon\user.png" />
+    <Content Include="Public\images\Icon\video.png" />
+    <Content Include="Public\images\Icon\video2.png" />
+    <Content Include="Public\images\img_404.png" />
+    <Content Include="Public\images\logo.png" />
+    <Content Include="Public\images\magasin\01.jpg" />
+    <Content Include="Public\images\magasin\010.jpg" />
+    <Content Include="Public\images\magasin\02.jpg" />
+    <Content Include="Public\images\magasin\03.jpg" />
+    <Content Include="Public\images\magasin\04.jpg" />
+    <Content Include="Public\images\magasin\05.Jpeg" />
+    <Content Include="Public\images\magasin\06.jpg" />
+    <Content Include="Public\images\magasin\07.jpg" />
+    <Content Include="Public\images\magasin\08.jpeg" />
+    <Content Include="Public\images\magasin\10.jpg" />
+    <Content Include="Public\images\magasin\11.jpg" />
+    <Content Include="Public\images\magasin\12.png" />
+    <Content Include="Public\images\magasin\13.jpg" />
+    <Content Include="Public\images\magasin\14.jpg" />
+    <Content Include="Public\images\magasin\15.jpeg" />
+    <Content Include="Public\images\magasin\16.jpg" />
+    <Content Include="Public\images\magasin\17.jpeg" />
+    <Content Include="Public\images\magasin\18.jpg" />
+    <Content Include="Public\images\magasin\19.jpg" />
+    <Content Include="Public\images\magasin\20.jpg" />
+    <Content Include="Public\images\magasin\21.jpg" />
+    <Content Include="Public\images\magasin\22.jpg" />
+    <Content Include="Public\images\magasin\23.jpg" />
+    <Content Include="Public\images\magasin\24.jpg" />
+    <Content Include="Public\images\magasin\25.jpg" />
+    <Content Include="Public\images\magasin\26.jpg" />
+    <Content Include="Public\images\magasin\27.png" />
+    <Content Include="Public\images\magasin\29.jpg" />
+    <Content Include="Public\images\magasin\30.jpg" />
+    <Content Include="Public\images\magasin\31.png" />
+    <Content Include="Public\images\magasin\32.jpg" />
+    <Content Include="Public\images\magasin\33.jpg" />
+    <Content Include="Public\images\magasin\34.jpg" />
+    <Content Include="Public\images\magasin\35.jpg" />
+    <Content Include="Public\images\magasin\36.jpg" />
+    <Content Include="Public\images\magasin\37.jpg" />
+    <Content Include="Public\images\magasin\38.jpg" />
+    <Content Include="Public\images\magasin\39.jpeg" />
+    <Content Include="Public\images\magasin\40.jpg" />
+    <Content Include="Public\images\magasin\41.jpg" />
+    <Content Include="Public\images\magasin\42.PNG" />
+    <Content Include="Public\images\magasin\43.JPG" />
+    <Content Include="Public\images\next.png" />
+    <Content Include="Public\images\prev.png" />
+    <Content Include="Public\images\social\010.jpeg" />
+    <Content Include="Public\images\social\1.jpeg" />
+    <Content Include="Public\images\social\10.JPG" />
+    <Content Include="Public\images\social\11.jpeg" />
+    <Content Include="Public\images\social\12.jpg" />
+    <Content Include="Public\images\social\13.jpg" />
+    <Content Include="Public\images\social\14.jpeg" />
+    <Content Include="Public\images\social\15.jpeg" />
+    <Content Include="Public\images\social\16.jpeg" />
+    <Content Include="Public\images\social\17.jpg" />
+    <Content Include="Public\images\social\18.jpg" />
+    <Content Include="Public\images\social\19.jpeg" />
+    <Content Include="Public\images\social\2.jpeg" />
+    <Content Include="Public\images\social\20.jpg" />
+    <Content Include="Public\images\social\21.png" />
+    <Content Include="Public\images\social\22.jpg" />
+    <Content Include="Public\images\social\23.jpeg" />
+    <Content Include="Public\images\social\24.jpg" />
+    <Content Include="Public\images\social\25.jpeg" />
+    <Content Include="Public\images\social\26.jpeg" />
+    <Content Include="Public\images\social\27.jpeg" />
+    <Content Include="Public\images\social\28.jpeg" />
+    <Content Include="Public\images\social\29.jpeg" />
+    <Content Include="Public\images\social\3.jpg" />
+    <Content Include="Public\images\social\30.jpeg" />
+    <Content Include="Public\images\social\31.jpeg" />
+    <Content Include="Public\images\social\32.jpeg" />
+    <Content Include="Public\images\social\33.jpeg" />
+    <Content Include="Public\images\social\34.jpeg" />
+    <Content Include="Public\images\social\35.jpeg" />
+    <Content Include="Public\images\social\36.jpeg" />
+    <Content Include="Public\images\social\37.jpeg" />
+    <Content Include="Public\images\social\38.jpeg" />
+    <Content Include="Public\images\social\39.jpeg" />
+    <Content Include="Public\images\social\4.jpg" />
+    <Content Include="Public\images\social\40.jpeg" />
+    <Content Include="Public\images\social\41.jpeg" />
+    <Content Include="Public\images\social\42.jpeg" />
+    <Content Include="Public\images\social\43.jpeg" />
+    <Content Include="Public\images\social\44.png" />
+    <Content Include="Public\images\social\45.jpeg" />
+    <Content Include="Public\images\social\46.jpeg" />
+    <Content Include="Public\images\social\47.jpeg" />
+    <Content Include="Public\images\social\48.jpeg" />
+    <Content Include="Public\images\social\49.jpeg" />
+    <Content Include="Public\images\social\5.jpeg" />
+    <Content Include="Public\images\social\50.jpeg" />
+    <Content Include="Public\images\social\51.jpeg" />
+    <Content Include="Public\images\social\52.jpeg" />
+    <Content Include="Public\images\social\53.jpeg" />
+    <Content Include="Public\images\social\54.jpeg" />
+    <Content Include="Public\images\social\55.jpeg" />
+    <Content Include="Public\images\social\56.jpeg" />
+    <Content Include="Public\images\social\57.jpeg" />
+    <Content Include="Public\images\social\59.jpeg" />
+    <Content Include="Public\images\social\6.jpeg" />
+    <Content Include="Public\images\social\60.jpeg" />
+    <Content Include="Public\images\social\61.jpeg" />
+    <Content Include="Public\images\social\62.jpeg" />
+    <Content Include="Public\images\social\63.jpeg" />
+    <Content Include="Public\images\social\64.jpeg" />
+    <Content Include="Public\images\social\65.jpeg" />
+    <Content Include="Public\images\social\7.jpeg" />
+    <Content Include="Public\images\social\8.jpeg" />
+    <Content Include="Public\images\social\9.jpg" />
+    <Content Include="Public\images\sport\01.jpeg" />
+    <Content Include="Public\images\sport\02.jpg" />
+    <Content Include="Public\images\sport\03.jpg" />
+    <Content Include="Public\images\sport\04.jpg" />
+    <Content Include="Public\images\sport\05.jpg" />
+    <Content Include="Public\images\sport\07.jpg" />
+    <Content Include="Public\images\sport\08.jpg" />
+    <Content Include="Public\images\sport\09.jpg" />
+    <Content Include="Public\images\sport\10.jpg" />
+    <Content Include="Public\images\sport\11.jpg" />
+    <Content Include="Public\images\sport\12.jpg" />
+    <Content Include="Public\images\sport\13.jpg" />
+    <Content Include="Public\images\sport\14.jpg" />
+    <Content Include="Public\images\sport\15.jpg" />
+    <Content Include="Public\images\sport\16.jpg" />
+    <Content Include="Public\images\sport\17.jpg" />
+    <Content Include="Public\images\sport\18.jpg" />
+    <Content Include="Public\images\sport\19.jpg" />
+    <Content Include="Public\images\sport\21.jpg" />
+    <Content Include="Public\images\sport\22.jpg" />
+    <Content Include="Public\images\sport\24.jpg" />
+    <Content Include="Public\images\sport\25.jpg" />
+    <Content Include="Public\images\sport\26.jpg" />
+    <Content Include="Public\images\sport\27.jpg" />
+    <Content Include="Public\images\sport\28.jpeg" />
+    <Content Include="Public\images\sport\29.jpg" />
+    <Content Include="Public\images\sport\30.jpg" />
+    <Content Include="Public\images\sport\31.jpg" />
+    <Content Include="Public\images\sport\32.jpg" />
+    <Content Include="Public\images\sport\33.jpg" />
+    <Content Include="Public\images\sport\34.jpg" />
+    <Content Include="Public\images\sport\35.jpg" />
+    <Content Include="Public\images\sport\36.jpg" />
+    <Content Include="Public\images\sport\37.jpg" />
+    <Content Include="Public\images\tech\team-1.jpg" />
+    <Content Include="Public\images\tech\team-2.jpg" />
+    <Content Include="Public\images\tech\team-3.jpg" />
+    <Content Include="Public\images\tech\team-4.jpg" />
+    <Content Include="Public\images\videos\02.jpg" />
+    <Content Include="Public\images\videos\1.png" />
+    <Content Include="Public\images\videos\3.jpg" />
+    <Content Include="Public\images\videos\4.jpg" />
+    <Content Include="Public\images\world\1.jpg" />
+    <Content Include="Public\images\world\10.jpeg" />
+    <Content Include="Public\images\world\11.jpeg" />
+    <Content Include="Public\images\world\12.jpeg" />
+    <Content Include="Public\images\world\13.jpeg" />
+    <Content Include="Public\images\world\14.jpg" />
+    <Content Include="Public\images\world\15.jpg" />
+    <Content Include="Public\images\world\16.jpg" />
+    <Content Include="Public\images\world\17.jpg" />
+    <Content Include="Public\images\world\18.jpg" />
+    <Content Include="Public\images\world\19.jpg" />
+    <Content Include="Public\images\world\2.jpg" />
+    <Content Include="Public\images\world\20.jpg" />
+    <Content Include="Public\images\world\21.jpg" />
+    <Content Include="Public\images\world\22.jpg" />
+    <Content Include="Public\images\world\23.jpg" />
+    <Content Include="Public\images\world\24.jpg" />
+    <Content Include="Public\images\world\25.jpeg" />
+    <Content Include="Public\images\world\26.jpeg" />
+    <Content Include="Public\images\world\27.jpeg" />
+    <Content Include="Public\images\world\28.jpeg" />
+    <Content Include="Public\images\world\29.jpeg" />
+    <Content Include="Public\images\world\3.jpg" />
+    <Content Include="Public\images\world\30.jpeg" />
+    <Content Include="Public\images\world\31.jpeg" />
+    <Content Include="Public\images\world\32.jpeg" />
+    <Content Include="Public\images\world\33.jpeg" />
+    <Content Include="Public\images\world\34.jpeg" />
+    <Content Include="Public\images\world\35.jpeg" />
+    <Content Include="Public\images\world\36.jpeg" />
+    <Content Include="Public\images\world\4.jpg" />
+    <Content Include="Public\images\world\5.jpg" />
+    <Content Include="Public\images\world\6.jpg" />
+    <Content Include="Public\images\world\7.jpg" />
+    <Content Include="Public\images\world\8.jpg" />
+    <Content Include="Public\images\world\9.jpeg" />
+    <Content Include="Public\Iqtisadiyyat.jpeg" />
+    <Content Include="Public\js\index.js" />
+    <Content Include="Public\js\jquery.min.js" />
+    <Content Include="Public\js\jquery.slicknav.min.js" />
+    <Content Include="Public\js\script.js" />
+    <Content Include="Public\js\superfish.min.js" />
+    <Content Include="Public\Kriminal.jpeg" />
+    <Content Include="Public\New.jpg" />
+    <Content Include="Public\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Public\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Public\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Public\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Public\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Public\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Public\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Public\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Public\owlcarousel\js\owl.carousel.min.js" />
+    <Content Include="Public\Pages\page_criminal\post1.html" />
+    <Content Include="Public\Pages\page_criminal\post10.html" />
+    <Content Include="Public\Pages\page_criminal\post11.html" />
+    <Content Include="Public\Pages\page_criminal\post12.html" />
+    <Content Include="Public\Pages\page_criminal\post13.html" />
+    <Content Include="Public\Pages\page_criminal\post14.html" />
+    <Content Include="Public\Pages\page_criminal\post15.html" />
+    <Content Include="Public\Pages\page_criminal\post16.html" />
+    <Content Include="Public\Pages\page_criminal\post17.html" />
+    <Content Include="Public\Pages\page_criminal\post18.html" />
+    <Content Include="Public\Pages\page_criminal\post19.html" />
+    <Content Include="Public\Pages\page_criminal\post2.html" />
+    <Content Include="Public\Pages\page_criminal\post20.html" />
+    <Content Include="Public\Pages\page_criminal\post21.html" />
+    <Content Include="Public\Pages\page_criminal\post22.html" />
+    <Content Include="Public\Pages\page_criminal\post23.html" />
+    <Content Include="Public\Pages\page_criminal\post24.html" />
+    <Content Include="Public\Pages\page_criminal\post25.html" />
+    <Content Include="Public\Pages\page_criminal\post26.html" />
+    <Content Include="Public\Pages\page_criminal\post27.html" />
+    <Content Include="Public\Pages\page_criminal\post28.html" />
+    <Content Include="Public\Pages\page_criminal\post29.html" />
+    <Content Include="Public\Pages\page_criminal\post3.html" />
+    <Content Include="Public\Pages\page_criminal\post30.html" />
+    <Content Include="Public\Pages\page_criminal\post31.html" />
+    <Content Include="Public\Pages\page_criminal\post32.html" />
+    <Content Include="Public\Pages\page_criminal\post33.html" />
+    <Content Include="Public\Pages\page_criminal\post34.html" />
+    <Content Include="Public\Pages\page_criminal\post35.html" />
+    <Content Include="Public\Pages\page_criminal\post36.html" />
+    <Content Include="Public\Pages\page_criminal\post37.html" />
+    <Content Include="Public\Pages\page_criminal\post38.html" />
+    <Content Include="Public\Pages\page_criminal\post39.html" />
+    <Content Include="Public\Pages\page_criminal\post4.html" />
+    <Content Include="Public\Pages\page_criminal\post40.html" />
+    <Content Include="Public\Pages\page_criminal\post41.html" />
+    <Content Include="Public\Pages\page_criminal\post42.html" />
+    <Content Include="Public\Pages\page_criminal\post43.html" />
+    <Content Include="Public\Pages\page_criminal\post44.html" />
+    <Content Include="Public\Pages\page_criminal\post45.html" />
+    <Content Include="Public\Pages\page_criminal\post46.html" />
+    <Content Include="Public\Pages\page_criminal\post47.html" />
+    <Content Include="Public\Pages\page_criminal\post48.html" />
+    <Content Include="Public\Pages\page_criminal\post49.html" />
+    <Content Include="Public\Pages\page_criminal\post5.html" />
+    <Content Include="Public\Pages\page_criminal\post50.html" />
+    <Content Include="Public\Pages\page_criminal\post51.html" />
+    <Content Include="Public\Pages\page_criminal\post6.html" />
+    <Content Include="Public\Pages\page_criminal\post7.html" />
+    <Content Include="Public\Pages\page_criminal\post8.html" />
+    <Content Include="Public\Pages\page_criminal\post9.html" />
+    <Content Include="Public\Pages\page_econmy\post.html" />
+    <Content Include="Public\Pages\page_econmy\post10.html" />
+    <Content Include="Public\Pages\page_econmy\post11.html" />
+    <Content Include="Public\Pages\page_econmy\post12.html" />
+    <Content Include="Public\Pages\page_econmy\post13.html" />
+    <Content Include="Public\Pages\page_econmy\post14.html" />
+    <Content Include="Public\Pages\page_econmy\post15.html" />
+    <Content Include="Public\Pages\page_econmy\post16.html" />
+    <Content Include="Public\Pages\page_econmy\post17.html" />
+    <Content Include="Public\Pages\page_econmy\post18.html" />
+    <Content Include="Public\Pages\page_econmy\post19.html" />
+    <Content Include="Public\Pages\page_econmy\post2.html" />
+    <Content Include="Public\Pages\page_econmy\post20.html" />
+    <Content Include="Public\Pages\page_econmy\post21.html" />
+    <Content Include="Public\Pages\page_econmy\post22.html" />
+    <Content Include="Public\Pages\page_econmy\post23.html" />
+    <Content Include="Public\Pages\page_econmy\post24.html" />
+    <Content Include="Public\Pages\page_econmy\post25.html" />
+    <Content Include="Public\Pages\page_econmy\post26.html" />
+    <Content Include="Public\Pages\page_econmy\post27.html" />
+    <Content Include="Public\Pages\page_econmy\post28.html" />
+    <Content Include="Public\Pages\page_econmy\post29.html" />
+    <Content Include="Public\Pages\page_econmy\post3.html" />
+    <Content Include="Public\Pages\page_econmy\post30.html" />
+    <Content Include="Public\Pages\page_econmy\post31.html" />
+    <Content Include="Public\Pages\page_econmy\post33.html" />
+    <Content Include="Public\Pages\page_econmy\post4.html" />
+    <Content Include="Public\Pages\page_econmy\post5.html" />
+    <Content Include="Public\Pages\page_econmy\post6.html" />
+    <Content Include="Public\Pages\page_econmy\post7.html" />
+    <Content Include="Public\Pages\page_econmy\post8.html" />
+    <Content Include="Public\Pages\page_econmy\post9.html" />
+    <Content Include="Public\Pages\page_healthy\post1.html" />
+    <Content Include="Public\Pages\page_healthy\post10.html" />
+    <Content Include="Public\Pages\page_healthy\post11.html" />
+    <Content Include="Public\Pages\page_healthy\post12.html" />
+    <Content Include="Public\Pages\page_healthy\post13.html" />
+    <Content Include="Public\Pages\page_healthy\post14.html" />
+    <Content Include="Public\Pages\page_healthy\post15.html" />
+    <Content Include="Public\Pages\page_healthy\post16.html" />
+    <Content Include="Public\Pages\page_healthy\post17.html" />
+    <Content Include="Public\Pages\page_healthy\post18.html" />
+    <Content Include="Public\Pages\page_healthy\post19.html" />
+    <Content Include="Public\Pages\page_healthy\post2.html" />
+    <Content Include="Public\Pages\page_healthy\post20.html" />
+    <Content Include="Public\Pages\page_healthy\post21.html" />
+    <Content Include="Public\Pages\page_healthy\post22.html" />
+    <Content Include="Public\Pages\page_healthy\post23.html" />
+    <Content Include="Public\Pages\page_healthy\post24.html" />
+    <Content Include="Public\Pages\page_healthy\post25.html" />
+    <Content Include="Public\Pages\page_healthy\post26.html" />
+    <Content Include="Public\Pages\page_healthy\post27.html" />
+    <Content Include="Public\Pages\page_healthy\post28.html" />
+    <Content Include="Public\Pages\page_healthy\post29.html" />
+    <Content Include="Public\Pages\page_healthy\post3.html" />
+    <Content Include="Public\Pages\page_healthy\post4.html" />
+    <Content Include="Public\Pages\page_healthy\post5.html" />
+    <Content Include="Public\Pages\page_healthy\post6.html" />
+    <Content Include="Public\Pages\page_healthy\post7.html" />
+    <Content Include="Public\Pages\page_healthy\post8.html" />
+    <Content Include="Public\Pages\page_healthy\post9.html" />
+    <Content Include="Public\Pages\page_magasin\post1.html" />
+    <Content Include="Public\Pages\page_magasin\post10.html" />
+    <Content Include="Public\Pages\page_magasin\post11.html" />
+    <Content Include="Public\Pages\page_magasin\post12.html" />
+    <Content Include="Public\Pages\page_magasin\post13.html" />
+    <Content Include="Public\Pages\page_magasin\post14.html" />
+    <Content Include="Public\Pages\page_magasin\post15.html" />
+    <Content Include="Public\Pages\page_magasin\post16.html" />
+    <Content Include="Public\Pages\page_magasin\post17.html" />
+    <Content Include="Public\Pages\page_magasin\post18.html" />
+    <Content Include="Public\Pages\page_magasin\post19.html" />
+    <Content Include="Public\Pages\page_magasin\post2.html" />
+    <Content Include="Public\Pages\page_magasin\post20.html" />
+    <Content Include="Public\Pages\page_magasin\post21.html" />
+    <Content Include="Public\Pages\page_magasin\post22.html" />
+    <Content Include="Public\Pages\page_magasin\post23.html" />
+    <Content Include="Public\Pages\page_magasin\post24.html" />
+    <Content Include="Public\Pages\page_magasin\post25.html" />
+    <Content Include="Public\Pages\page_magasin\post26.html" />
+    <Content Include="Public\Pages\page_magasin\post27.html" />
+    <Content Include="Public\Pages\page_magasin\post28.html" />
+    <Content Include="Public\Pages\page_magasin\post29.html" />
+    <Content Include="Public\Pages\page_magasin\post3.html" />
+    <Content Include="Public\Pages\page_magasin\post30.html" />
+    <Content Include="Public\Pages\page_magasin\post31.html" />
+    <Content Include="Public\Pages\page_magasin\post32.html" />
+    <Content Include="Public\Pages\page_magasin\post33.html" />
+    <Content Include="Public\Pages\page_magasin\post34.html" />
+    <Content Include="Public\Pages\page_magasin\post35.html" />
+    <Content Include="Public\Pages\page_magasin\post36.html" />
+    <Content Include="Public\Pages\page_magasin\post37.html" />
+    <Content Include="Public\Pages\page_magasin\post38.html" />
+    <Content Include="Public\Pages\page_magasin\post39.html" />
+    <Content Include="Public\Pages\page_magasin\post4.html" />
+    <Content Include="Public\Pages\page_magasin\post40.html" />
+    <Content Include="Public\Pages\page_magasin\post41.html" />
+    <Content Include="Public\Pages\page_magasin\post42.html" />
+    <Content Include="Public\Pages\page_magasin\post43.html" />
+    <Content Include="Public\Pages\page_magasin\post5.html" />
+    <Content Include="Public\Pages\page_magasin\post6.html" />
+    <Content Include="Public\Pages\page_magasin\post7.html" />
+    <Content Include="Public\Pages\page_magasin\post8.html" />
+    <Content Include="Public\Pages\page_magasin\post9.html" />
+    <Content Include="Public\Pages\page_social\post1.html" />
+    <Content Include="Public\Pages\page_social\post10.html" />
+    <Content Include="Public\Pages\page_social\post11.html" />
+    <Content Include="Public\Pages\page_social\post12.html" />
+    <Content Include="Public\Pages\page_social\post13.html" />
+    <Content Include="Public\Pages\page_social\post14.html" />
+    <Content Include="Public\Pages\page_social\post15.html" />
+    <Content Include="Public\Pages\page_social\post16.html" />
+    <Content Include="Public\Pages\page_social\post17.html" />
+    <Content Include="Public\Pages\page_social\post18.html" />
+    <Content Include="Public\Pages\page_social\post19.html" />
+    <Content Include="Public\Pages\page_social\post2.html" />
+    <Content Include="Public\Pages\page_social\post20.html" />
+    <Content Include="Public\Pages\page_social\post21.html" />
+    <Content Include="Public\Pages\page_social\post22.html" />
+    <Content Include="Public\Pages\page_social\post23.html" />
+    <Content Include="Public\Pages\page_social\post24.html" />
+    <Content Include="Public\Pages\page_social\post25.html" />
+    <Content Include="Public\Pages\page_social\post26.html" />
+    <Content Include="Public\Pages\page_social\post27.html" />
+    <Content Include="Public\Pages\page_social\post28.html" />
+    <Content Include="Public\Pages\page_social\post29.html" />
+    <Content Include="Public\Pages\page_social\post3.html" />
+    <Content Include="Public\Pages\page_social\post30.html" />
+    <Content Include="Public\Pages\page_social\post31.html" />
+    <Content Include="Public\Pages\page_social\post32.html" />
+    <Content Include="Public\Pages\page_social\post33.html" />
+    <Content Include="Public\Pages\page_social\post34.html" />
+    <Content Include="Public\Pages\page_social\post35.html" />
+    <Content Include="Public\Pages\page_social\post36.html" />
+    <Content Include="Public\Pages\page_social\post37.html" />
+    <Content Include="Public\Pages\page_social\post38.html" />
+    <Content Include="Public\Pages\page_social\post39.html" />
+    <Content Include="Public\Pages\page_social\post4.html" />
+    <Content Include="Public\Pages\page_social\post40.html" />
+    <Content Include="Public\Pages\page_social\post41.html" />
+    <Content Include="Public\Pages\page_social\post42.html" />
+    <Content Include="Public\Pages\page_social\post43.html" />
+    <Content Include="Public\Pages\page_social\post44.html" />
+    <Content Include="Public\Pages\page_social\post45.html" />
+    <Content Include="Public\Pages\page_social\post46.html" />
+    <Content Include="Public\Pages\page_social\post47.html" />
+    <Content Include="Public\Pages\page_social\post48.html" />
+    <Content Include="Public\Pages\page_social\post49.html" />
+    <Content Include="Public\Pages\page_social\post5.html" />
+    <Content Include="Public\Pages\page_social\post50.html" />
+    <Content Include="Public\Pages\page_social\post51.html" />
+    <Content Include="Public\Pages\page_social\post52.html" />
+    <Content Include="Public\Pages\page_social\post53.html" />
+    <Content Include="Public\Pages\page_social\post54.html" />
+    <Content Include="Public\Pages\page_social\post55.html" />
+    <Content Include="Public\Pages\page_social\post56.html" />
+    <Content Include="Public\Pages\page_social\post57.html" />
+    <Content Include="Public\Pages\page_social\post59.html" />
+    <Content Include="Public\Pages\page_social\post6.html" />
+    <Content Include="Public\Pages\page_social\post60.html" />
+    <Content Include="Public\Pages\page_social\post61.html" />
+    <Content Include="Public\Pages\page_social\post62.html" />
+    <Content Include="Public\Pages\page_social\post63.html" />
+    <Content Include="Public\Pages\page_social\post64.html" />
+    <Content Include="Public\Pages\page_social\post65.html" />
+    <Content Include="Public\Pages\page_social\post7.html" />
+    <Content Include="Public\Pages\page_social\post8.html" />
+    <Content Include="Public\Pages\page_social\post9.html" />
+    <Content Include="Public\Pages\page_sport\post1.html" />
+    <Content Include="Public\Pages\page_sport\post10.html" />
+    <Content Include="Public\Pages\page_sport\post11.html" />
+    <Content Include="Public\Pages\page_sport\post12.html" />
+    <Content Include="Public\Pages\page_sport\post13.html" />
+    <Content Include="Public\Pages\page_sport\post14.html" />
+    <Content Include="Public\Pages\page_sport\post15.html" />
+    <Content Include="Public\Pages\page_sport\post16.html" />
+    <Content Include="Public\Pages\page_sport\post17.html" />
+    <Content Include="Public\Pages\page_sport\post18.html" />
+    <Content Include="Public\Pages\page_sport\post19.html" />
+    <Content Include="Public\Pages\page_sport\post2.html" />
+    <Content Include="Public\Pages\page_sport\post20.html" />
+    <Content Include="Public\Pages\page_sport\post21.html" />
+    <Content Include="Public\Pages\page_sport\post22.html" />
+    <Content Include="Public\Pages\page_sport\post23.html" />
+    <Content Include="Public\Pages\page_sport\post24.html" />
+    <Content Include="Public\Pages\page_sport\post25.html" />
+    <Content Include="Public\Pages\page_sport\post26.html" />
+    <Content Include="Public\Pages\page_sport\post27.html" />
+    <Content Include="Public\Pages\page_sport\post28.html" />
+    <Content Include="Public\Pages\page_sport\post29.html" />
+    <Content Include="Public\Pages\page_sport\post3.html" />
+    <Content Include="Public\Pages\page_sport\post30.html" />
+    <Content Include="Public\Pages\page_sport\post31.html" />
+    <Content Include="Public\Pages\page_sport\post32.html" />
+    <Content Include="Public\Pages\page_sport\post33.html" />
+    <Content Include="Public\Pages\page_sport\post34.html" />
+    <Content Include="Public\Pages\page_sport\post4.html" />
+    <Content Include="Public\Pages\page_sport\post5.html" />
+    <Content Include="Public\Pages\page_sport\post6.html" />
+    <Content Include="Public\Pages\page_sport\post7.html" />
+    <Content Include="Public\Pages\page_sport\post8.html" />
+    <Content Include="Public\Pages\page_sport\post9.html" />
+    <Content Include="Public\Pages\page_world\post1.html" />
+    <Content Include="Public\Pages\page_world\post10.html" />
+    <Content Include="Public\Pages\page_world\post11.html" />
+    <Content Include="Public\Pages\page_world\post12.html" />
+    <Content Include="Public\Pages\page_world\post13.html" />
+    <Content Include="Public\Pages\page_world\post14.html" />
+    <Content Include="Public\Pages\page_world\post15.html" />
+    <Content Include="Public\Pages\page_world\post16.html" />
+    <Content Include="Public\Pages\page_world\post17.html" />
+    <Content Include="Public\Pages\page_world\post18.html" />
+    <Content Include="Public\Pages\page_world\post19.html" />
+    <Content Include="Public\Pages\page_world\post2.html" />
+    <Content Include="Public\Pages\page_world\post20.html" />
+    <Content Include="Public\Pages\page_world\post21.html" />
+    <Content Include="Public\Pages\page_world\post22.html" />
+    <Content Include="Public\Pages\page_world\post23.html" />
+    <Content Include="Public\Pages\page_world\post24.html" />
+    <Content Include="Public\Pages\page_world\post25.html" />
+    <Content Include="Public\Pages\page_world\post26.html" />
+    <Content Include="Public\Pages\page_world\post27.html" />
+    <Content Include="Public\Pages\page_world\post28.html" />
+    <Content Include="Public\Pages\page_world\post29.html" />
+    <Content Include="Public\Pages\page_world\post3.html" />
+    <Content Include="Public\Pages\page_world\post30.html" />
+    <Content Include="Public\Pages\page_world\post31.html" />
+    <Content Include="Public\Pages\page_world\post32.html" />
+    <Content Include="Public\Pages\page_world\post33.html" />
+    <Content Include="Public\Pages\page_world\post34.html" />
+    <Content Include="Public\Pages\page_world\post35.html" />
+    <Content Include="Public\Pages\page_world\post36.html" />
+    <Content Include="Public\Pages\page_world\post4.html" />
+    <Content Include="Public\Pages\page_world\post5.html" />
+    <Content Include="Public\Pages\page_world\post6.html" />
+    <Content Include="Public\Pages\page_world\post7.html" />
+    <Content Include="Public\Pages\page_world\post8.html" />
+    <Content Include="Public\Pages\page_world\post9.html" />
+    <Content Include="Public\Sağlamliq.jpg" />
+    <Content Include="Public\video\01.mp4" />
+    <Content Include="Public\video\02.mp4" />
+    <Content Include="Public\video\03.mp4" />
+    <Content Include="Public\video\04.mp4" />
+    <Content Include="Public\Şou.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Main\Economy.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Admin\" />
+    <Folder Include="Areas\Admin\Views\Applies\" />
+    <Folder Include="Areas\Admin\Views\Messages\" />
+    <Folder Include="Areas\Admin\Views\News\" />
+    <Folder Include="Areas\Admin\Views\Questions\" />
+    <Folder Include="Areas\Admin\Views\SiteSettings\" />
+    <Folder Include="Structure\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendor\font-awesome\less\animated.less" />
+    <Content Include="Assets\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\vendor\font-awesome\less\core.less" />
+    <Content Include="Assets\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\vendor\font-awesome\less\icons.less" />
+    <Content Include="Assets\vendor\font-awesome\less\larger.less" />
+    <Content Include="Assets\vendor\font-awesome\less\list.less" />
+    <Content Include="Assets\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Assets\vendor\font-awesome\less\path.less" />
+    <Content Include="Assets\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Assets\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Assets\vendor\font-awesome\less\variables.less" />
+    <Content Include="Assets\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Files\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Files\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Files\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Files\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Files\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\News_category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\News_category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\News_category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\News_category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\News_category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\C_News_category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\C_News_category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\C_News_category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\C_News_category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\C_News_category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Registration\Index.cshtml" />
+    <EntityDeploy Include="Models\Models.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Models.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Models.edmx.diagram">
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Public\asset\css\style.css.map" />
+    <Content Include="Public\asset\sass\style.scss" />
+    <Content Include="Public\fonts\fontawesome-webfont5b62.eot" />
+    <Content Include="Public\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="Public\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="Public\fonts\fontawesome-webfont5b62.woff2" />
+    <Content Include="Public\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Public\fonts\FryPro.otf" />
+    <Content Include="Views\Main\Interesting.cshtml" />
+    <Content Include="Views\Forregstr\Registr.cshtml" />
+    <Content Include="Views\Main\health.cshtml" />
+    <Content Include="Views\Main\Sport.cshtml" />
+    <Content Include="Views\Roles\User_rol.cshtml" />
+    <Content Include="Views\Log\Login.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Log\Error.cshtml" />
+    <Content Include="Views\Main\Social.cshtml" />
+    <Content Include="Views\Main\HeadPage.cshtml" />
+    <Content Include="Views\Main\Team.cshtml" />
+    <Content Include="Views\Main\Contact.cshtml" />
+    <Content Include="Views\Main\World.cshtml" />
+    <Content Include="Views\Main\Criminal.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52210</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52210/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

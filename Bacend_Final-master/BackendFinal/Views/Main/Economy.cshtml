@@ -1,0 +1,516 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+
+@using BackendFinal.Models;
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <!Doctype html>
+<html lang="En">
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+           <div class="bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 hidden-xs">
+                    <div class="breaking">
+                        <span>Qaynar Xəbərlər:</span>
+                        <p class='heading'>
+                            <span id='dynamicText'></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="pull-right options">
+                        <a href="#" class="subscribe">Abunə ol</a>
+                        <span>|</span>
+                        
+                        <a href="http://localhost:52210/Log/Login" class="log in"style="padding-right:15px;">Sign Out</a>
+                        <a href="http://localhost:52210/Forregstr/Registr" class="login">Qeydiyyat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="~/Public/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <div class="container margin-top-30">
+            <div class="row">
+                <!--======================PATH=========================-->
+                <div id="breadcrumbs" class="stuck_position margin-bottom-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="moduletable   col-sm-12">
+                                <div class="module_container">
+                                    <ul class="breadcrumb">
+                                        <li><a href="index-2.html" class="pathway">Baş səhifə</a></li>
+                                        <li><a href="index-2.html" class="pathway">Kateqoriya</a></li>
+                                        <li class="active"><span>İqtisadiyyat</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <!--====================LAYOUT-1=============================-->
+                    <div class="layout_1 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                              
+                                    <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/@ViewBag.one.pages">
+                                            <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                            <img src="~/Public/@ViewBag.one.photo" style="height:321px;" class="img-responsive" alt="">
+                                            <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                                <h4>
+                                                    @ViewBag.one.title
+                                                </h4>
+                                                <p>
+                                                   @ViewBag.one.text
+                                                </p>
+                                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                    <span class="author">@ViewBag.one.author</span><span class="date">@ViewBag.one.dates</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+   
+                            </div>
+                            <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                @foreach (C_News_category item in ViewBag.Eco)
+                                {
+                                    <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/@item.pages">
+                                            <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                            <img src="~/Public/@item.photo" class="img-responsive" alt="">
+                                            <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                                <h5>
+                                                    @item.title
+                                                </h5>
+                                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                <span class="author">@item.author</span>
+                                                <span class="date">@item.dates</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--====================LAYOUT-2=============================-->
+        <div class="layout_2 margin-bottom-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            @foreach (var item in Model.Where(x=>x.id >=5 && x.id <=7))
+            {
+                <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+
+                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <a href="~/Public/@item.pages">
+                                <img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                            <span class="cat">
+                               @Html.DisplayFor(it=>item.title)
+                            </span>
+                            <h4><a href="Pages/page_econmy/post5.html">@item.text</a></h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <span class="author">@Html.DisplayFor(it => item.author)</span>
+                        <span class="date">@Html.DisplayFor(it => item.dates)</span></div>
+
+
+                    </div>
+                </div>
+            }
+
+            </div>
+            <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+             @foreach (var item in Model.Where(x => x.id >7 && x.id <= 10))
+             {
+                <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="icon-24 video2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                            <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                        </div>
+                        <span class="cat">@item.title</span>
+                        <h4><a href="Pages/page_econmy/post11.html">@item.text</a></h4>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <span class="author">@item.author</span>
+                        <span class="date">@item.dates</span></div>
+                    </div>
+                </div>
+                 }
+            </div>
+        </div>
+        <!--====================LAYOUT-3=============================-->
+       <h3 class="heading-1 margin-bottom-20"><span>Başlıq</span></h3>
+        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        @foreach (var item in Model.Where(x => x.id ==11))
+        {
+            <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                    </div>
+                    <h4><a href="#">@item.title</a></h4>
+                    <p>
+                        @item.text
+                    </p>
+                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">@item.author</span><span class="date">@item.dates</span></div>
+                </div>
+            </div>
+          }
+            <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                @foreach (var item in Model.Where(x => x.id > 11 && x.id <=14))
+                {
+                    <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <h4>
+                                <a href="#">
+                                    @item.title
+                                </a>
+                            </h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">@item.author</span><span class="date">@item.dates</span></div>
+                        </div>
+                    </div>
+                    <hr class="l2">
+                }
+
+
+                <div class="margin-bottom-30  fadeIn" style="visibility:visible; animation-name: fadeIn;"></div>
+            </div>
+        </div>
+        <!--====================LAYOUT-4=============================-->
+         <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            @foreach (var item in Model.Where(x => x.id ==15))
+            {
+                <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                        </div>
+                        <h4>
+                            <a href="#">
+                               @item.title
+                            </a>
+                        </h4>
+                        <p>
+                            @item.text
+                        </p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <span class="author">@item.author</span>
+                        <span class="date">@item.dates</span></div>
+                    </div>
+                </div>
+            }
+
+            <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                @foreach (var item in Model.Where(x => x.id > 15 && x.id <= 18))
+                {
+                    <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <a href="~/Public/@item.pages">
+                                <img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <h4>
+                                <a href="#">
+                                    @item.title
+                                </a>
+                            </h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <span class="date">@item.dates</span></div>
+                        </div>
+                    </div>
+                    <hr class="l2">
+                }
+
+
+                <div class="margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+            </div>
+        </div>
+        <!--====================LAYOUT-5=============================-->
+        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        @foreach (var item in Model.Where(x => x.id == 19))
+        {
+            <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                    </div>
+                    <h4 class="margin-top-10">
+                        <a href="Pages/page_econmy/post18.html">
+                            @item.title
+                        </a>
+                    </h4>
+                    <p>
+                        @item.text
+                    </p>
+                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <span class="author">@item.author</span><span class="date">@item.dates</span></div>
+                </div>
+            </div>
+          }
+            <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            @foreach (var item in Model.Where(x => x.id > 19 && x.id <= 22))
+            {
+                <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h4><a href="Pages/page_econmy/post19.html">  @item.title </a></h4>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <span class="date">@item.dates</span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="l2">
+             }
+                <div class="margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+            </div>
+        </div>
+    </div>
+    <aside class="col-md-4 col-sm-4">
+        <!--====================LAYOUT-ASIDE_1-======================-->
+        <div class="ads ad-300 margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <h3 class="heading-1"><span>Elan</span></h3>
+            <img src="images/Add/300x250.jpg" class="img-responsive" alt="">
+        </div>
+        <!--====================LAYOUT-ASIDE_2-======================-->
+        <div class="side-widget margin-bottom-60  fadeIn social" style="visibility: visible; animation-name: fadeIn;">
+            <h3 class="heading-1"><span>sosial şəbəkə</span></h3>
+            <div class="side-share  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="share s_facebook  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <i class="fa fa-facebook"></i>
+                </div>
+                <div class="share s_linkedin  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                <div class="share s_plus  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <i class="fa fa-google-plus"></i>
+                </div>
+            </div>
+            <div class="clearfix  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+        </div>
+        <!--====================LAYOUT-ASIDE_3-======================-->
+       <div class="side-widget margin-bottom-50  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <h3 class="heading-1"><span>baş xəbərlər</span></h3>
+            @foreach (var item in Model.Where(x => x.id == 23))
+            {
+            <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <a href="~/Public/@item.pages">
+                    <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                    <img src="~/Public/@item.photo" class="img-responsive" alt="">
+                    <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h6>@item.title</h6>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <span class="author">@item.title</span>
+                            <span class="date">@item.dates</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            }
+           <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <h3 class="heading-1  margin-top-60"><span>Ümumi</span></h3>
+     <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+       @foreach (var item in Model.Where(x => x.id > 23 && x.id < 27))
+       {
+
+        <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                </div>
+                <h4 class="margin-top-10"><a href="#">@item.title </a></h4>
+                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <span class="date">@item.dates</span>
+                </div>
+            </div>
+        </div>
+         }
+            </div>
+
+                 <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    @foreach (var item in Model.Where(x => x.id > 26 && x.id < 29))
+                    {
+
+                        <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                </div>
+                                <h4 class="margin-top-10"><a href="#">@item.title </a></h4>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <span class="date">@item.dates</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    @foreach (var item in Model.Where(x => x.id >28  && x.id <= 30))
+                    {
+
+                        <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                </div>
+                                <h4 class="margin-top-10"><a href="#">@item.title </a></h4>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <span class="date">@item.dates</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+
+
+            </div>
+            @foreach (var item in Model.Where(x => x.id == 31))
+            {
+            <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <a href="~/Public/@item.pages">
+                    <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                    <img src="~/Public/@item.photo" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h6>@item.title</h6>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <span class="author">@item.author</span><span class="date">@item.dates</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            }
+             <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <h3 class="heading-1  margin-top-60"><span>Ümumi</span></h3>
+
+                <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+              @foreach (var item in Model.Where(x => x.id > 31 && x.id <34 ))
+              {
+                    <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                            <h4 class="margin-top-10"><a href="#">@item.title</a></h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                        </div>
+                        <hr class="l4 margin-top-15 margin-bottom-20">
+                    </div>
+                  }
+                </div>
+                 <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+              @foreach (var item in Model.Where(x => x.id >= 34 && x.id < 36))
+              {
+                    <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                            <h4 class="margin-top-10"><a href="#">@item.title</a></h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                        </div>
+                        <hr class="l4 margin-top-15 margin-bottom-20">
+                    </div>
+                  }
+                </div>
+                <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    @foreach (var item in Model.Where(x => x.id >= 36 && x.id <= 37))
+                    {
+                        <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                </div>
+                                <h4 class="margin-top-10"><a href="#">@item.title</a></h4>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                            </div>
+                            <hr class="l4 margin-top-15 margin-bottom-20">
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </aside>
+            </div>
+        </div>
+</body>
+</html>

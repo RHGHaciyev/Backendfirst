@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="watcherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="_News_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar(max)" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="dates" Type="date" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="pages" Type="nvarchar" MaxLength="50" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blog_item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="blog_item_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="blog_item_description" Type="nvarchar" MaxLength="50" />
+    <Property Name="blog_category_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blog_item_tofile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="blog_item_id" Type="int" Nullable="false" />
+    <Property Name="files_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="contents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content_text" Type="nvarchar(max)" />
+    <Property Name="content_author_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="content_author_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="Content_sent_button" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="exchange">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="exchange_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="exchange_buy" Type="nvarchar" MaxLength="50" />
+    <Property Name="exchange_sales" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="file_name" Type="nvarchar" MaxLength="150" />
+    <Property Name="file_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="file_size" Type="nvarchar(max)" />
+    <Property Name="file_path" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="filled_contents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="Content_user_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="text" Type="nvarchar(max)" />
+    <Property Name="dates" Type="datetime" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="nvarchar(max)" />
+    <Property Name="profession" Type="nvarchar" MaxLength="50" />
+    <Property Name="person_name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User_reg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="int" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_" Type="nchar" MaxLength="10" />
+    <Property Name="roleID" Type="int" />
+  </EntityType>
+  <EntityType Name="User_rol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_reg_id" Type="int" />
+  </EntityType>
+  <Association Name="FK__News_category_categories">
+    <End Role="categories" Type="Self.categories" Multiplicity="1" />
+    <End Role="_News_category" Type="Self._News_category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="_News_category">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_item_tofile_Blog_item">
+    <End Role="Blog_item" Type="Self.Blog_item" Multiplicity="1" />
+    <End Role="Blog_item_tofile" Type="Self.Blog_item_tofile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog_item">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Blog_item_tofile">
+        <PropertyRef Name="blog_item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_item_tofile_Files">
+    <End Role="Files" Type="Self.Files" Multiplicity="1" />
+    <End Role="Blog_item_tofile" Type="Self.Blog_item_tofile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Blog_item_tofile">
+        <PropertyRef Name="files_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contents_User_Type">
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="0..1" />
+    <End Role="contents" Type="Self.contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="contents">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_category_type">
+    <End Role="type" Type="Self.type" Multiplicity="1" />
+    <End Role="_News_category" Type="Self._News_category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="_News_category">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_reg_User_rol">
+    <End Role="User_rol" Type="Self.User_rol" Multiplicity="0..1" />
+    <End Role="User_reg" Type="Self.User_reg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_reg">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Type_User_reg">
+    <End Role="User_reg" Type="Self.User_reg" Multiplicity="0..1" />
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_reg">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_Type">
+        <PropertyRef Name="user_reg_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="watcherModelStoreContainer">
+    <EntitySet Name="_News_category" EntityType="Self._News_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog_item" EntityType="Self.Blog_item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog_item_tofile" EntityType="Self.Blog_item_tofile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contents" EntityType="Self.contents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exchange" EntityType="Self.exchange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="filled_contents" EntityType="Self.filled_contents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="type" EntityType="Self.type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_reg" EntityType="Self.User_reg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_rol" EntityType="Self.User_rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Type" EntityType="Self.User_Type" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__News_category_categories" Association="Self.FK__News_category_categories">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="_News_category" EntitySet="_News_category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_item_tofile_Blog_item" Association="Self.FK_Blog_item_tofile_Blog_item">
+      <End Role="Blog_item" EntitySet="Blog_item" />
+      <End Role="Blog_item_tofile" EntitySet="Blog_item_tofile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_item_tofile_Files" Association="Self.FK_Blog_item_tofile_Files">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="Blog_item_tofile" EntitySet="Blog_item_tofile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contents_User_Type" Association="Self.FK_contents_User_Type">
+      <End Role="User_Type" EntitySet="User_Type" />
+      <End Role="contents" EntitySet="contents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_category_type" Association="Self.FK_News_category_type">
+      <End Role="type" EntitySet="type" />
+      <End Role="_News_category" EntitySet="_News_category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_reg_User_rol" Association="Self.FK_User_reg_User_rol">
+      <End Role="User_rol" EntitySet="User_rol" />
+      <End Role="User_reg" EntitySet="User_reg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Type_User_reg" Association="Self.FK_User_Type_User_reg">
+      <End Role="User_reg" EntitySet="User_reg" />
+      <End Role="User_Type" EntitySet="User_Type" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

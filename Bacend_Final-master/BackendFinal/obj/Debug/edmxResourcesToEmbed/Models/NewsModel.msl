@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="watcherModelStoreContainer" CdmEntityContainer="watcherEntity1">
+    <EntitySetMapping Name="Blog_item">
+      <EntityTypeMapping TypeName="watcherModel.Blog_item">
+        <MappingFragment StoreEntitySet="Blog_item">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="blog_item_title" ColumnName="blog_item_title" />
+          <ScalarProperty Name="blog_item_description" ColumnName="blog_item_description" />
+          <ScalarProperty Name="blog_category_id" ColumnName="blog_category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog_item_tofile">
+      <EntityTypeMapping TypeName="watcherModel.Blog_item_tofile">
+        <MappingFragment StoreEntitySet="Blog_item_tofile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="blog_item_id" ColumnName="blog_item_id" />
+          <ScalarProperty Name="files_id" ColumnName="files_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories_main_news">
+      <EntityTypeMapping TypeName="watcherModel.categories_main_news">
+        <MappingFragment StoreEntitySet="categories_main_news">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="videos_id" ColumnName="videos_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories_part">
+      <EntityTypeMapping TypeName="watcherModel.categories_part">
+        <MappingFragment StoreEntitySet="categories_part">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="news_number" ColumnName="news_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="watcherModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_message" ColumnName="user_message" />
+          <ScalarProperty Name="sent_button" ColumnName="sent_button" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contents">
+      <EntityTypeMapping TypeName="watcherModel.content">
+        <MappingFragment StoreEntitySet="contents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="content_text" ColumnName="content_text" />
+          <ScalarProperty Name="content_author_name" ColumnName="content_author_name" />
+          <ScalarProperty Name="content_author_email" ColumnName="content_author_email" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="Content_sent_button" ColumnName="Content_sent_button" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exchanges">
+      <EntityTypeMapping TypeName="watcherModel.exchange">
+        <MappingFragment StoreEntitySet="exchange">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="exchange_name" ColumnName="exchange_name" />
+          <ScalarProperty Name="exchange_buy" ColumnName="exchange_buy" />
+          <ScalarProperty Name="exchange_sales" ColumnName="exchange_sales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="watcherModel.File">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="file_name" ColumnName="file_name" />
+          <ScalarProperty Name="file_type" ColumnName="file_type" />
+          <ScalarProperty Name="file_size" ColumnName="file_size" />
+          <ScalarProperty Name="file_path" ColumnName="file_path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="filled_contents">
+      <EntityTypeMapping TypeName="watcherModel.filled_contents">
+        <MappingFragment StoreEntitySet="filled_contents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="Content_user_name" ColumnName="Content_user_name" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="headNews">
+      <EntityTypeMapping TypeName="watcherModel.headNew">
+        <MappingFragment StoreEntitySet="headNews">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="repeats">
+      <EntityTypeMapping TypeName="watcherModel.repeat">
+        <MappingFragment StoreEntitySet="repeats">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="adversitment_photos" ColumnName="adversitment_photos" />
+          <ScalarProperty Name="locations" ColumnName="locations" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="watcherModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="watcherModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="person_name" ColumnName="person_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="types">
+      <EntityTypeMapping TypeName="watcherModel.type">
+        <MappingFragment StoreEntitySet="type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_as_guest">
+      <EntityTypeMapping TypeName="watcherModel.User_as_guest">
+        <MappingFragment StoreEntitySet="User_as_guest">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_reg">
+      <EntityTypeMapping TypeName="watcherModel.User_reg">
+        <MappingFragment StoreEntitySet="User_reg">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Type">
+      <EntityTypeMapping TypeName="watcherModel.User_Type">
+        <MappingFragment StoreEntitySet="User_Type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_reg_id" ColumnName="user_reg_id" />
+          <ScalarProperty Name="User_as_guest_id" ColumnName="User_as_guest_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videos">
+      <EntityTypeMapping TypeName="watcherModel.video">
+        <MappingFragment StoreEntitySet="videos">
+          <ScalarProperty Name="videos_id" ColumnName="videos_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="watcherModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_News_category">
+      <EntityTypeMapping TypeName="watcherModel.C_News_category">
+        <MappingFragment StoreEntitySet="_News_category">
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="pages" ColumnName="pages" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

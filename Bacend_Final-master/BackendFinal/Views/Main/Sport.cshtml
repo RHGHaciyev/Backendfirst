@@ -1,0 +1,447 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+@using BackendFinal.Models;
+@{
+    ViewBag.Title = "Sport";
+}
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+            <div class="bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 hidden-xs">
+                            <div class="breaking">
+                                <span>Qaynar Xəbərlər:</span>
+                                <p class='heading'>
+                                    <span id='dynamicText'></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="pull-right options">
+                                <a href="#" class="subscribe">Abunə ol</a>
+                                <span>|</span>
+                                <a href="#" class="login">Qeydiyyat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="~/Public/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <!-- ===============.=======CONTENT================ -->
+        <div class="container margin-top-30">
+            <div class="row">
+                <!--======================PATH=========================-->
+                <div id="breadcrumbs" class="stuck_position margin-bottom-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="moduletable   col-sm-12">
+                                <div class="module_container">
+                                    <ul class="breadcrumb">
+                                        <li><a href="index-2.html" class="pathway">Baş səhifə</a></li>
+                                        <li><a href="index-2.html" class="pathway">Kateqoriya</a></li>
+                                        <li class="active"><span>İdman</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <!--=============================LAyout -1 ======================-->
+                    <h3 class="heading-1"><span>Əsas Xəbərlər</span></h3>
+                    <div class="layout_1 home4-masonry2 margin-bottom-50  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            @foreach (var item in Model.Where(x => x.id > 97 && x.id <= 100))
+                            {
+                                <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/@item.pages">
+                                            <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                            <img src="~/Public/@item.photo" style="height: 249px;" class="img-responsive" alt="">
+                                            <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                <h5>@item.title</h5>
+                                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            }
+                           
+                          
+                       
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        @foreach (var item in Model.Where(x => x.id > 100 && x.id <= 103))
+                        {
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="@item.pages">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/@item.photo" style="height: 249px;" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>@item.title </h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ===============.=======ASIDE================ -->
+                <aside class="col-md-4 col-sm-4">
+                    <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <!-- ======================Trending Yenis================ -->
+                        <div class="side-widget margin-bottom-30 animated" style="visibility: visible;">
+                            <h3 class="heading-1"><span>yeni</span></h3>
+                            <ul class="trending-text">
+                                @foreach (var item in Model.Where(x => x.id > 103 && x.id <= 109))
+                                {
+                                    <li>
+                                        <em>@item.title</em>
+                                        <p><a href="@item.pages">@item.text</a><span>@item.dates</span></p>
+                                    </li>
+                                }
+                                
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <!--====================LAYOUT-2=============================-->
+        <div class="container">
+            <div class="layout_2 margin-bottom-15  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    @foreach (var item in Model.Where(x => x.id > 109 && x.id <= 116))
+                    {
+                    <div class="col-md-2 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="thumb margin-bottom-10  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                            </div>
+                            <h4><a href="#">@item.title</a></h4>
+                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!--====================VIDEO CAROUSEL======================-->
+        <h3 class="heading-1"><span>Videolar</span></h3>
+        <div class=" margin-top-30   fadeIn animated margin-bottom-60">
+            <div class="margin-top-30 video-carousel-wrap bg-dark">
+                <div class="container">
+                    <div class="clearfix"></div>
+                    <div class="col-md-8 col-sm-7 no-padding">
+                        <div class="video-container">
+                            <video id="video" width="400" onclick="togglePause()" controls>
+                                <source src="~/Public/video/01.mp4" type="video/mp4">
+                            </video>
+                            <div class="layout_1--item vc-item1 active">
+                                <div class="video-play"></div>
+                                <span class="badge text-uppercase badge-overlay badge-tech">Lorem</span>
+                                <div class="overlay"></div>
+                                <img src="~/Public/images/videos/1.png" class="img-responsive" alt="" />
+                                <div class="layout-detail padding-25">
+                                    <h4>Avtobusda sernişin sürücü ilə dava etdi</h4>
+                                    <div class="meta">
+                                        <span class="author">by Rizvan H.</span><span class="date">Sep. 27, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout_1--item vc-item2">
+                                <div class="video-play"></div>
+                                <span class="badge text-uppercase badge-overlay badge-tech">Lorem</span>
+                                <div class="overlay"></div>
+                                <img src="~/Public/images/videos/02.jpg" class="img-responsive" alt="" />
+                                <div class="layout-detail padding-25">
+                                    <h4>Ünvanlı sosial yardım artılacaq</h4>
+                                    <div class="meta">
+                                        <span class="author">by Rizvan H.</span><span class="date">Sep. 27, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout_1--item vc-item3">
+                                <div class="video-play"></div>
+                                <span class="badge text-uppercase badge-overlay badge-tech">Tech</span>
+                                <div class="overlay"></div>
+                                <img src="~/Public/images/videos/3.jpg" class="img-responsive" alt="" />
+                                <div class="layout-detail padding-25">
+                                    <h4>Yeni ana olan mugennni ƏRİ VƏ ÖVLADI İLƏ- Shou biznes</h4>
+                                    <div class="meta">
+                                        <span class="author">
+                                            by Firuze R
+                                        </span><span class="date">Sep. 27, 2016</span><span class="comments">3</span>
+                                        <span class="views">284</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout_1--item vc-item4">
+                                <div class="video-play"></div>
+                                <span class="badge text-uppercase badge-overlay badge-tech">Lorem</span>
+                                <div class="overlay"></div>
+                                <img src="~/Public/images/videos/4.jpg" class="img-responsive" alt="" />
+                                <div class="layout-detail padding-25">
+                                    <h4>
+                                        İrana gedənlər məcburi sığortalanacaqlar I Xezer Xeber
+                                    </h4>
+                                    <div class="meta">
+                                        <span class="author">by Rizvan H.</span><span class="date">Sep. 27, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout_1--item vc-item4">
+                                <div class="video-play"></div>
+                                <span class="badge text-uppercase badge-overlay badge-tech">Lorem</span>
+                                <div class="overlay"></div>
+                                <img src="~/Public/images/videos/4.jpg" class="img-responsive" alt="" />
+                                <div class="layout-detail padding-25">
+                                    <h4>
+                                        İrana gedənlər məcburi sığortalanacaqlar I Xezer Xeber
+                                    </h4>
+                                    <div class="meta">
+                                        <span class="author">by Firuze R.</span><span class="date">Sep. 27, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-5 no-padding">
+                        <div class="now-playing">
+                            <i class="fa fa-play"></i>
+                            <p>Ən son baxılanlar</p>
+                        </div>
+                        <div class="video-list">
+                            <ul>
+                                <li class="vl-video1">
+                                    <div class="thumb">
+                                        <div class="overlay-alt"></div>
+                                        <div class="video-play-32"></div>
+                                        <img src="~/Public/images/videos/1.png" class="img-responsive" alt="" />
+                                    </div>
+                                    <p>Avtobusda sernişin sürücü ilə dava etdi</p>
+                                </li>
+                                <li class="vl-video2">
+                                    <div class="thumb">
+                                        <div class="overlay-alt"></div>
+                                        <div class="video-play-32"></div>
+                                        <img src="~/Public/images/videos/02.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <p>Ünvanlı sosial yardım artılacaq</p>
+                                </li>
+                                <li class="vl-video3">
+                                    <div class="thumb">
+                                        <div class="overlay-alt"></div>
+                                        <div class="video-play-32"></div>
+                                        <img src="~/Public/images/videos/3.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <p>Yeni ana olan müğənni əri və övladı ilə</p>
+                                </li>
+                                <li class="vl-video2">
+                                    <div class="thumb">
+                                        <div class="overlay-alt"></div>
+                                        <div class="video-play-32"></div>
+                                        <img src="~/Public/images/videos/4.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <p>
+                                        İrana gedənlər məcburi sığortalanacaqlar I Xezer Xeber
+                                    </p>
+                                </li>
+                                <li class="vl-video2">
+                                    <div class="thumb">
+                                        <div class="overlay-alt"></div>
+                                        <div class="video-play-32"></div>
+                                        <img src="~/Public/images/videos/4.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <p>
+                                        İrana gedənlər məcburi sığortalanacaqlar I Xezer Xeber
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container margin-top-30">
+            <div class="row">
+                <!--====================Layout-2======================-->
+                <div class="layout_2 margin-bottom-15  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                      @foreach (var item in Model.Where(x => x.id > 116 && x.id <= 129))
+                      {
+                        <div class="col-md-2 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb margin-bottom-10  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                </div>
+                                <h4><a href="#">@item.title</a></h4>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                            </div>
+                        </div>
+                    }
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <!--====================Layout-3======================-->
+                    <h3 class="heading-1"><span>son xəbərlər</span></h3>
+                    @foreach (var item in Model.Where(x => x.id > 129 && x.id <= 133))
+                    {
+                        <div class="layout_3--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                             
+                                <h4><a href="~/Public/@item.pages">@item.title</a></h4>
+                                <p>
+                                    @item.text
+                                </p>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <span class="author">@item.author</span>
+                                <span class="date">@item.dates</span></div>
+                            </div>
+                        </div>
+                    }
+                    
+                  
+                </div>
+                <!-- ===============.=======ASIDE================ -->
+                <aside class="col-md-4 col-sm-4">
+                    <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <!-- ======================Layout aside -social================ -->
+                        <div class="side-widget margin-bottom-60">
+                            <h3 class="heading-1"><span>sosial şəbəkə</span></h3>
+                            <div class="social">
+                                <div class="share s_facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                                <div class="share s_linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                                <div class="share s_plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- ======================Advertsment================ -->
+                        <div class="ads ad-300 margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <h3 class="heading-1"><span>Reklam</span></h3>
+                            <img src="~/Public/images/Add/300x250.jpg" class="img-responsive" alt="">
+                        </div>
+                        <!-- ======================Layout-down================ -->
+                        <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <h3 class="heading-1  margin-top-60"><span>baş Xəbərlər</span></h3>
+                            <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                @foreach (var item in Model.Where(x => x.id > 133 && x.id <= 135))
+                                {
+                                <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                            <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                        </div>
+                                        <h4 class="margin-top-10"><a href="~/Public/@item.pages">@item.title</a></h4>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                            <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                @foreach (var item in Model.Where(x => x.id > 135 && x.id <= 138))
+                                {
+                                    <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                                <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                                <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                            </div>
+                                            <h4 class="margin-top-10"><a href="~/Public/@item.pages">@item.title</a></h4>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                              @foreach (var item in Model.Where(x => x.id > 138 && x.id <= 140))
+                              {
+                                <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                            <a href="~/Public/@item.pages"><img src="~/Public/@item.photo" class="img-responsive" alt=""></a>
+                                        </div>
+                                        <h4 class="margin-top-10"><a href="@item.pages">@item.title</a></h4>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">@item.dates</span></div>
+                                    </div>
+                                </div>
+                              }
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+

@@ -1,0 +1,177 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+@using BackendFinal.Models;
+@{
+    ViewBag.Title = "Team";
+}
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+            <div class="bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 hidden-xs">
+                            <div class="breaking">
+                                <span>Qaynar Xəbərlər:</span>
+                                <p class='heading'>
+                                    <span id='dynamicText'></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="pull-right options">
+                                <a href="#" class="subscribe">Abunə ol</a>
+                                <span>|</span>
+                                <a href="#" class="login">Qeydiyyat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <!-- ===============.=======CONTENT================ -->
+        <div class="container margin-top-30">
+            <div class="row">
+                <!-- ========================== Path =========================== -->
+                <div id="breadcrumbs" class="stuck_position">
+                    <div class="container">
+                        <div class="row">
+                            <div class="moduletable   col-sm-12">
+                                <div class="module_container">
+                                    <ul class="breadcrumb">
+                                        <li><a href="/joomla_64017/index.php" class="pathway">Baş səhifə</a></li>
+                                        <li class="active"><span>Yazarlar</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==========================TECH =========================== -->
+                <div id="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="content-inner">
+                                <!-- Left sidebar -->
+                                <div id="component" class="col-sm-12">
+                                    <main role="main">
+                                        <div id="system-message-container">
+                                        </div>
+                                        <section class="page-category page-category__team padding-bottom-25">
+                                            <header class="page_header">
+                                                <h2 class="heading-style-2 visible-first"><span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">Yazarlar</span></h2>
+                                            </header>
+                                        </section>
+                                        <!-- content-bottom -->
+                                        <div id="content-bottom">
+                                            <div class="row">
+                                                <div class="moduletable team  col-sm-12">
+                                                    <div class="module_container">
+                                                        <div class="mod-newsflash-adv mod-newsflash-adv__team cols-4" id="module_171">
+                                                            <div class="row">
+@foreach (var item in Model.Where(x => x.id > 205 && x.id <= 210))
+{
+                                                                <article class="col-sm-3 item item_num0 item__module   visible-first" id="item_41">
+                                                                    <!-- Intro Image -->
+                                                                    <figure class="item_img img-intro img-intro__none">
+                                                                        <img src="~/Public/@item.photo" alt="">
+                                                                        <figcaption>@item.title</figcaption>
+                                                                    </figure>
+                                                                    <div class="item_content">
+                                                                        <!-- Item title -->
+                                                                        <h5 class="item_title heading-style-5 visible-first">
+                                                                        <span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">@item.author</span>                                                                            <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">Damon</span></h5>
+                                                                        <!-- Introtext -->
+                                                                        <div class="item_introtext">
+                                                                        </div>
+                                                                        <!-- Read More link -->
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </article>
+}
+                                                            </div>
+                                                            <div class="row">
+@foreach (var item in Model.Where(x => x.id > 210 && x.id <= 212))
+{
+
+                                                                <article class="col-sm-3 item item_num4 item__module   visible-first" id="item_45">
+                                                                    <!-- Intro Image -->
+                                                                    <figure class="item_img img-intro img-intro__none">
+                                                                        <img src="~/Public/@item.photo" alt="">
+                                                                        <figcaption>Learning &amp; @item.title</figcaption>
+                                                                    </figure>
+                                                                    <div class="item_content">
+                                                                        <!-- Item title -->
+                                                                        <h5 class="item_title heading-style-5 visible-first">
+                                                                        <span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">@item.author</span>                                                                            <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">Hope</span></h5>
+                                                                        <!-- Introtext -->
+                                                                        <div class="item_introtext">
+                                                                        </div>
+                                                                        <!-- Read More link -->
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </article>
+}
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+

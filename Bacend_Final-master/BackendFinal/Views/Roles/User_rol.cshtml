@@ -1,0 +1,45 @@
+﻿@model BackendFinal.Models.User_rol
+
+@{
+    ViewBag.Title = "User_rol";
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <body style="background:url(/Public/New.jpg);">
+
+        <div class="form-horizontal">
+
+            <div class="col-md-8 col-sm-8 hidden-xs">
+                <div class="breaking">
+                    <img src="~/Public/images/logo.png" alt="" style="background:white;padding:10px 20px;">
+                    <p class='heading'>
+                        <span id='dynamicText'></span>
+                    </p>
+                </div>
+            </div>
+          
+
+            <h2 style="text-align:center;color:white;background:black;font-size:35px;font-weight:lighter;">Add Role</h2>
+            <hr style="width:20%;">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+
+                <div class="col-md-7" style="text-align:center;padding-bottom:20px;padding-top:3%;">
+                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                    <br />
+                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class=" col-md-7" style="text-align:center;">
+                    <input type="submit" value="Login" class="btn btn-default" style="padding:10px 22px;margin-top:20px; background:black;color:white;font-size:25px;font-weight:lighter;" />
+                </div>
+            </div>
+        </div>
+        </body>
+}

@@ -1,0 +1,99 @@
+﻿
+@model BackendFinal.Models.User_reg
+
+@{
+    ViewBag.Title = "Registr";
+    Layout = null;
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <body style="background:url(/Public/New.jpg);">
+ 
+            <div class="col-md-8 col-sm-8 hidden-xs">
+                <div class="breaking">
+                    <img src="~/Public/images/logo.png" alt="" style="background:white;padding:10px 20px;">
+                    <p class='heading'>
+                        <span id='dynamicText'></span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="pull-right options">
+                    <a href="http://localhost:52210/Log/Login" class="login" style="text-decoration:none;color:white;float:right;position:relative;top:-50px;">Sign In</a>
+                </div>
+            </div>
+            <h2 style="text-align:center;color:white;background:black;font-size:35px;font-weight:lighter;">Sign Up</h2>
+            <div class="form-horizontal">
+
+               
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+
+                    <div class="col-md-7" style="text-align:center;padding-bottom:20px;">
+                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-md-7" style="text-align:center;padding-bottom:20px;">
+                        @Html.EditorFor(model => model.surname, new { htmlAttributes = new { @class = "form-control", placeholder = "Surname", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.surname, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-md-7" style="text-align:center;padding-bottom:20px;">
+                        @Html.EditorFor(model => model.age, new { htmlAttributes = new { @class = "form-control", placeholder = "Age", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.age, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-md-7" style="text-align:center;padding-bottom:20px;">
+                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                        @Html.ValidationMessage("Repeat", new { @class = "text-danger", style = "color:red;font-size:17px;font-weight:bold;background:black;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-md-7" style="text-align:center;padding-bottom:20px;">
+                        @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "form-control", placeholder = "Phone", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class=" col-md-7" style="text-align:center">
+                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password", style = "width:30%;height:7%;border:1px solid black;padding-left:10px;" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger", style = "color:red;font-size:20px;font-weight:bold;background:black;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-5 col-md-7" style="text-align:center;">
+                        <input type="submit" value="Create Account" class="btn btn-default" style="padding:10px 22px;margin-left:13.5%;margin-top:20px; background:black;color:white;font-size:25px;font-weight:lighter;" />
+                    </div>
+                </div>
+            </div>
+</body>
+}
+

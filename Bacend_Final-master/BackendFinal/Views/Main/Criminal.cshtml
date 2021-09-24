@@ -1,0 +1,590 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+@using BackendFinal.Models;
+@{
+    ViewBag.Title = "Criminal";
+}
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+            <div class="bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 hidden-xs">
+                            <div class="breaking">
+                                <span>Qaynar Xəbərlər:</span>
+                                <p class='heading'>
+                                    <span id='dynamicText'></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="pull-right options">
+                                <a href="#" class="subscribe">Abunə ol</a>
+                                <span>|</span>
+                                <a href="#" class="login">Qeydiyyat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="~/Public/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <!--======================PATH=========================-->
+        <div id="breadcrumbs" class="stuck_position margin-bottom-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="moduletable   col-sm-12">
+                        <div class="module_container">
+                            <ul class="breadcrumb">
+                                <li><a href="index-2.html" class="pathway">Baş səhifə</a></li>
+                                <li><a href="index-2.html" class="pathway">Kateqoriya</a></li>
+                                <li class="active"><span>Kriminal</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===============.=======Slider-2================ -->
+        <div id="owl-two" class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post1.html">
+                    <img src="~/Public/images/criminal/1.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>İki yaşlı uşaq 4-cü mərtəbədən yıxıldı, sağ qaldı</h4>
+                        <p>Mingəçevir şəhərində ehtiyatsızlıq nəticəsində dördüncü mərtəbədən yıxılan körpə sağ qalıb.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post2.html">
+                    <img src="~/Public/images/criminal/2.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>70 yaşında intihar etdi</h4>
+                        <p>Göyçay rayonunda intihar hadisəsi baş verib. "Qafqazinfo" APA-ya istinadən xəbər verir ki, Göyçay şəhəri Ziya Bünyadov küçəsində yaşayan, 1947-ci il təvəllüdlü Bəsti Mustafayeva evin həyətindəki yardımçı tikilidə özünü kəndirlə asaraq intihar edib.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post3.html">
+                    <img src="~/Public/images/criminal/3.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>Bakıda xadimə işlədiyi evdən oğurluq edib</h4>
+                        <p>Binəqədi rayonunun M.Cəlal küçəsindəki evlərdən birindən pul oğurlamaqda şübhəli bilinən İ.Əliyeva tutulub.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post4.html">
+                    <img src="~/Public/images/criminal/4.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>Şəmkirdə qatar gənc oğlanın üstündən keçib</h4>
+                        <p>Şəmkirdə sərnişin qatarı gənc oğlanı vuraraq öldürüb..</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post5.html">
+                    <img src="~/Public/images/criminal/5.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>Masallıda yanğın olub</h4>
+                        <p>Masallı rayonu, Ərkivan qəsəbəsində yanğın qeydə alınıb.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post6.html">
+                    <img src="~/Public/images/criminal/6.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>3-cü kurs tələbəsi niyə intihar edib? </h4>
+                        <p>Azərbaycan Dövlət Mədəniyyət və İncəsənət Universitetinin 3-cü kurs tələbəsi Bəşirov Sədinin intiharının bəzi təfərrüatları məlum olub.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post7.html">
+                    <img src="~/Public/images/criminal/7.jpeg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>8-ci sinif şagirdi ehtiyatsızlığın qurbanı olub</h4>
+                        <p>Qax rayonunda 13 yaşlı oğlan intihar edib.</p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="~/Public/Pages/page_criminal/post8.html">
+                    <img src="~/Public/images/criminal/8.jpg" class="img-responsive" alt="">
+                    <div class="layout-detail padding-25  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="icon-32 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        <h4>Ağsuda oğlu ilə əlbir olub ərini öldürən qadın</h4>
+                        <p>Ağsuda oğlu ilə əlbir olub ərini öldürən qadının cinayət törətdiyi yerdən görüntülər yayılıb. </p>
+                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Mahita G.</span><span class="date">Sep. 27, 2016</span><span class="comments">3</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- ===============.=======End Slider-2================ -->
+        <!-- ===============.=======CONTENT================ -->
+        <div class="container margin-top-30">
+            <div class="row">
+                <div class="col-md-8 col-sm-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <!-- ===============.=======Layout-1================ -->
+                    <h3 class="heading-1 margin-top-60"><span>yeni</span></h3>
+                    <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post9.html"><img src="~/Public/images/criminal/9.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post9.html">Yevlaxda ana qızı ilə birgə özünü 2-ci mərtəbədən atdı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post10.html"><img src="~/Public/images/criminal/10.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post10.html">Goranboy sakini dərmandan zəhərləndi</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post11.html"><img src="~/Public/images/criminal/11.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post11.html">Neftçala sakini traktorun altında qalaraq öldü</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post12.html"><img src="~/Public/images/criminal/12.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post12.html">Bakıda üç qardaş bıçaqlanıb</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post14.html"><img src="~/Public/images/criminal/14.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post14.html">Nefti ailə üzvlərinin üzərinə tökdü </a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post15.html"><img src="~/Public/images/criminal/15.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post15.html">Ağacdan zoğal yığırdı, ilan sancdı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post16.html"><img src="~/Public/images/criminal/16.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post16.html">İmişli sakini özünü asdı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-6 col-sm-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post17.html"><img src="~/Public/images/criminal/17.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_criminal/post17.html">Polis faciəvi şəkildə həlak oldu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                        </div>
+                    </div>
+                    <!-- ===============.=======Layout-2================ -->
+                    <div class="padding-top-30 padding-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1"><span>Yeni</span></h3>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post18.html"><img src="~/Public/images/criminal/18.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post18.html">Meyvə satan qadın döyüldü</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post19.html"><img src="~/Public/images/criminal/18.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post19.html">Bakıda qızıl-zinət əşyaları oğurlayan dəstə saxlanılıb</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post20.html"><img src="~/Public/images/criminal/20.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post20.html">Bakıda “Niva” qaçırıldı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post21.html"><img src="~/Public/images/criminal/21.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post21.html">Şəmkirdə sevgilisinə görə döyülən gənc oğlan kor oldu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post22.html"><img src="~/Public/images/criminal/22.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post22.html">Bakıda iki qadını bıçaqlayan şəxs tutulub</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post23.html"><img src="~/Public/images/criminal/23.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post23.html">Toyda əri ilə dalaşan qadının dəhşətli sonu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===============.=======Layout-3================ -->
+                    <h3 class="heading-1 margin-top-60"><span>əsas xəbərlər</span></h3>
+                    <!-- ===============.=======Slider-3================ -->
+                    <div id="owl-three" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_criminal/post24.html"><img src="~/Public/images/criminal/24.jpeg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_criminal/post24.html">Ərindən boşandığı üçün özünü qatarın altına atdığı deyilirdi</a></h4>
+                                        <p>
+                                            Şəmkir rayonunda qatarın qadını vurması ilə bağlı bəzi təfərrüatlar məlum olub...
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_criminal/post25.html"><img src="~/Public/images/criminal/25.jpg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_criminal/post25.html">“Neolit”dəki qanlı gecənin detalları</a></h4>
+                                        <p>
+                                            Ötən gün “Neolit” restoranında baş tutan kütləvi davanın təfərrüatı məlum olub. Şahidlərin
+                                            verdiyi məlumata görə...
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_criminal/post26.html"><img src="~/Public/images/criminal/26.jpeg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_criminal/post26.html">Biləsuvarda 13 yaşlı yeniyetmə döyülüb</a></h4>
+                                        <p>
+                                            Hadisəyə səbəb Novruz Aslanlının qonaqlarından biri operatordan müğənnini yox, başqa
+                                            yeri çəkməsini istəməsi olub...
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===============.=======End Slider-3================ -->
+                    <!-- ===============.=======Layout-4================ -->
+                    <h3 class="heading-1 margin-top-60"><span>baş xəbərlər</span></h3>
+                    <div class="layout_3  fadeIn animated" style="visibility: visible;">
+                        <div class="row margin-bottom-30  fadeIn animated" style="visibility: visible;">
+                            <div class="col-md-8 col-sm-8 margin-bottom-30  fadeIn animated" style="visibility: visible;">
+                                <div class="layout_3--item  fadeIn animated" style="visibility: visible;">
+                                    <div class="thumb  fadeIn animated" style="visibility: visible;">
+                                        <a href="~/Public/Pages/page_criminal/post27.html"><img src="~/Public/images/criminal/27.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h2 class="margin-top-30"><a href="~/Public/Pages/page_criminal/post27.html">Maşının vurduğu 12 yaşlı oğlan xəstəxanada öldü</a></h2>
+                                    <p>
+                                        Bakı-Qazax magistralının Hacıqabul rayonu ərazisindən keçən hissəsində avtomobillə vurulan
+                                        piyada reanimasiya şöbəsində ölüb.
+                                    </p>
+                                    <div class="meta  fadeIn animated" style="visibility: visible;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn animated" style="visibility: visible;">
+                                <div class="layout_2--item margin-bottom-25  fadeIn animated" style="visibility: visible;">
+                                    <div class="thumb margin-bottom-10  fadeIn animated" style="visibility: visible;">
+                                        <div class="icon-24 gallery2  fadeIn animated" style="visibility: visible;"></div>
+                                        <a href="~/Public/Pages/page_criminal/post28.html"><img src="~/Public/images/criminal/28.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post28.html">İlan 8 yaşlı uşağı başından sancdı</a></h4>
+                                    <div class="meta  fadeIn animated" style="visibility: visible;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                                <div class="layout_2--item margin-bottom-25  fadeIn animated" style="visibility: visible;">
+                                    <div class="thumb margin-bottom-10  fadeIn animated" style="visibility: visible;">
+                                        <div class="icon-24 gallery2  fadeIn animated" style="visibility: visible;"></div>
+                                        <a href="~/Public/Pages/page_criminal/post29.html"><img src="~/Public/images/criminal/29.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post29.html">Gəncədə sərxoş oğul anasını döydü</a></h4>
+                                    <div class="meta  fadeIn animated" style="visibility: visible;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===============.=======LAYOUT_ASSIDE================ -->
+                <aside class="col-md-4 col-sm-4">
+                    <!-- ===============.=======LAYOUT_ASSIDE-1================ -->
+                    <div class="ads ad-300 margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1 margin-top-60"><span>elan</span></h3>
+                        <img src="~/Public/images/Add/300x250.jpg" class="img-responsive" alt="">
+                    </div>
+                    <!-- ===============.=======LAYOUT_ASSIDE-2================ -->
+                    <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1  margin-top-60"><span>başlıq</span></h3>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_criminal/post30.html"><img src="~/Public/images/criminal/30.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post30.html">Tovuzda ər arvadını döyərək xəstəxanalıq etdi</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post31.html"><img src="~/Public/images/criminal/31.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post31.html">Göldə batan 15 yaşlı yeniyetmənin meyiti tapılıb</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post32.html"><img src="~/Public/images/criminal/32.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post32.html">75 yaşlı qadın etiraz etdi, döyüldü</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 video2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_criminal/post33.html"><img src="~/Public/images/criminal/33.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post33.html">“Opel” dərəyə aşdı, ölən və yaralanan var</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post34.html"><img src="~/Public/images/criminal/34.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post34.html">Bakıda ögey oğul atanın 2 milyonluq mülkünü satıb</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post35.html"><img src="~/Public/images/criminal/35.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post35.html">Oğurluğa girdi, səsə oyanan qızı...</a></h4>
+                                    <div class="meta  fadeIn margin-bottom-30" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post36.html"><img src="~/Public/images/criminal/36.png" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post36.html">Velosiped qəzaları 6 ayda 7 can alıb</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_criminal/post37.html"><img src="~/Public/images/criminal/37.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_criminal/post37.html">Culfada dəhşətli olay</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===============.=======LAYOUT_SOCAIL================ -->
+                    <div class="side-widget margin-bottom-60">
+                        <h3 class="heading-1 margin-top-80"><span>sosial şəbəkə</span></h3>
+                        <div class="social">
+                            <div class="share s_facebook">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="share s_linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                            <div class="share s_plus">
+                                <i class="fa fa-google-plus"></i>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- ===============.=======LAYOUT_ASSIDE-3================ -->
+                    <div class="side-widget margin-bottom-50  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1"><span>əsas xəbərlər</span></h3>
+                        <ul class="side-posts">
+                            <li><span>25.08</span> <a href="~/Public/Pages/page_criminal/post38.html">Qəbiristanlıqdan güldan oğurladılar</a></li>
+                            <li><span>23.08</span> <a href="~/Public/Pages/page_criminal/post39.html">Meşədə itən qız tapıldı</a></li>
+                            <li><span>22.08</span> <a href="~/Public/Pages/page_criminal/post40.html">“Fikirləşdim ki, məni öldürəcəklər”</a></li>
+                            <li><span>21.08</span> <a href="~/Public/Pages/page_criminal/post41.html">Nardaranda 22 yaşlı qız itkin düşüb</a></li>
+                            <li><span>20.08</span> <a href="~/Public/Pages/page_criminal/post42.html">Müğənni olmaq istəyən qadın ərini bıçaqladı</a></li>
+                            <li><span>19.08</span> <a href="~/Public/Pages/page_criminal/post43.html">Ər 25 günün gəlinini döyüb xəstəxanalıq etdi</a></li>
+                            <li><span>18.08</span> <a href="~/Public/Pages/page_criminal/post44.html">2 qadın yük maşınının altında qalıb</a></li>
+                            <li><span>25.08</span> <a href="~/Public/Pages/page_criminal/post45.html">23 yaşlı gənci “tok” vurdu, öldü</a></li>
+                            <li><span>23.08</span> <a href="~/Public/Pages/page_criminal/post46.html">Psixotrop dərmanla özünü öldürmək istədi</a></li>
+                            <li><span>22.08</span> <a href="~/Public/Pages/page_criminal/post47.html">Ərəblər Bakının mərkəzində oğurluq etdilər</a></li>
+                            <li><span>22.08</span> <a href="~/Public/Pages/page_criminal/post48.html">İçərişəhərdə silah-sursat tapıldı</a></li>
+                            <li><span>17.08</span> <a href="~/Public/Pages/page_criminal/post49.html">15 yaşlı oğlan dondurmadan zəhərləndi</a></li>
+                            <li><span>16.08</span> <a href="~/Public/Pages/page_criminal/post50.html">Mənzil dələduzları həbs olundu</a></li>
+                            <li><span>15.08</span> <a href="~/Public/Pages/page_criminal/post51.html">Qadın özünü körpüdən atdı</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>

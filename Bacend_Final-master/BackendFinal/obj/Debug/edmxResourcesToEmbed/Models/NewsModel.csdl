@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="watcherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blog_item">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="blog_item_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="blog_item_description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="blog_category_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Blog_item_tofile" Relationship="Self.FK_Blog_item_tofile_Blog_item" FromRole="Blog_item" ToRole="Blog_item_tofile" />
+  </EntityType>
+  <EntityType Name="Blog_item_tofile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="blog_item_id" Type="Int32" Nullable="false" />
+    <Property Name="files_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Blog_item" Relationship="Self.FK_Blog_item_tofile_Blog_item" FromRole="Blog_item_tofile" ToRole="Blog_item" />
+    <NavigationProperty Name="File" Relationship="Self.FK_Blog_item_tofile_Files" FromRole="Blog_item_tofile" ToRole="Files" />
+  </EntityType>
+  <EntityType Name="categories_main_news">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dates" Type="DateTime" Precision="0" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="videos_id" Type="Int32" />
+    <NavigationProperty Name="video" Relationship="Self.FK_categories_main_news_videos" FromRole="categories_main_news" ToRole="videos" />
+    <NavigationProperty Name="videos" Relationship="Self.FK_videos_categories_main_news" FromRole="categories_main_news" ToRole="videos" />
+  </EntityType>
+  <EntityType Name="categories_part">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="news_number" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="user_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sent_button" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_id" Type="Int32" />
+    <NavigationProperty Name="User_Type" Relationship="Self.FK_Contact_User_Type" FromRole="Contact" ToRole="User_Type" />
+  </EntityType>
+  <EntityType Name="content">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="content_author_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="content_author_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="Content_sent_button" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User_Type" Relationship="Self.FK_contents_User_Type" FromRole="contents" ToRole="User_Type" />
+  </EntityType>
+  <EntityType Name="exchange">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exchange_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="exchange_buy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="exchange_sales" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="File">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="file_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="file_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="file_size" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="file_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Blog_item_tofile" Relationship="Self.FK_Blog_item_tofile_Files" FromRole="Files" ToRole="Blog_item_tofile" />
+  </EntityType>
+  <EntityType Name="filled_contents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content_user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dates" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="user_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="headNew">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dates" Type="DateTime" Precision="0" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="repeat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adversitment_photos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="locations" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="profession" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="person_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="C_News_category1" Relationship="watcherModel.FKNews_category_type" FromRole="type" ToRole="C_News_category1" />
+  </EntityType>
+  <EntityType Name="User_as_guest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="User_Type" Relationship="Self.FK_User_Type_User_as_guest" FromRole="User_as_guest" ToRole="User_Type" />
+  </EntityType>
+  <EntityType Name="User_reg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="Int32" />
+    <NavigationProperty Name="User_Type" Relationship="Self.FK_User_Type_User_reg" FromRole="User_reg" ToRole="User_Type" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User_Type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_reg_id" Type="Int32" />
+    <Property Name="User_as_guest_id" Type="Int32" />
+    <NavigationProperty Name="Contacts" Relationship="Self.FK_Contact_User_Type" FromRole="User_Type" ToRole="Contact" />
+    <NavigationProperty Name="contents" Relationship="Self.FK_contents_User_Type" FromRole="User_Type" ToRole="contents" />
+    <NavigationProperty Name="User_as_guest" Relationship="Self.FK_User_Type_User_as_guest" FromRole="User_Type" ToRole="User_as_guest" />
+    <NavigationProperty Name="User_reg" Relationship="Self.FK_User_Type_User_reg" FromRole="User_Type" ToRole="User_reg" />
+  </EntityType>
+  <EntityType Name="video">
+    <Key>
+      <PropertyRef Name="videos_id" />
+    </Key>
+    <Property Name="videos_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dates" Type="DateTime" Precision="0" />
+    <Property Name="category_id" Type="Int32" />
+    <NavigationProperty Name="categories_main_news" Relationship="Self.FK_categories_main_news_videos" FromRole="videos" ToRole="categories_main_news" />
+    <NavigationProperty Name="categories_main_news1" Relationship="Self.FK_videos_categories_main_news" FromRole="videos" ToRole="categories_main_news" />
+  </EntityType>
+  <Association Name="FK_Blog_item_tofile_Blog_item">
+    <End Role="Blog_item" Type="Self.Blog_item" Multiplicity="1" />
+    <End Role="Blog_item_tofile" Type="Self.Blog_item_tofile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog_item">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Blog_item_tofile">
+        <PropertyRef Name="blog_item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_item_tofile_Files">
+    <End Role="Files" Type="Self.File" Multiplicity="1" />
+    <End Role="Blog_item_tofile" Type="Self.Blog_item_tofile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Blog_item_tofile">
+        <PropertyRef Name="files_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_categories_main_news_videos">
+    <End Role="videos" Type="Self.video" Multiplicity="0..1" />
+    <End Role="categories_main_news" Type="Self.categories_main_news" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="videos">
+        <PropertyRef Name="videos_id" />
+      </Principal>
+      <Dependent Role="categories_main_news">
+        <PropertyRef Name="videos_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_videos_categories_main_news">
+    <End Role="categories_main_news" Type="Self.categories_main_news" Multiplicity="0..1" />
+    <End Role="videos" Type="Self.video" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories_main_news">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="videos">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contact_User_Type">
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="0..1" />
+    <End Role="Contact" Type="Self.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_contents_User_Type">
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="0..1" />
+    <End Role="contents" Type="Self.content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="contents">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Type_User_as_guest">
+    <End Role="User_as_guest" Type="Self.User_as_guest" Multiplicity="0..1" />
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_as_guest">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_Type">
+        <PropertyRef Name="User_as_guest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Type_User_reg">
+    <End Role="User_reg" Type="Self.User_reg" Multiplicity="0..1" />
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_reg">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_Type">
+        <PropertyRef Name="user_reg_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="watcherEntity1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blog_item" EntityType="Self.Blog_item" />
+    <EntitySet Name="Blog_item_tofile" EntityType="Self.Blog_item_tofile" />
+    <EntitySet Name="categories_main_news" EntityType="Self.categories_main_news" />
+    <EntitySet Name="categories_part" EntityType="Self.categories_part" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="contents" EntityType="Self.content" />
+    <EntitySet Name="exchanges" EntityType="Self.exchange" />
+    <EntitySet Name="Files" EntityType="Self.File" />
+    <EntitySet Name="filled_contents" EntityType="Self.filled_contents" />
+    <EntitySet Name="headNews" EntityType="Self.headNew" />
+    <EntitySet Name="repeats" EntityType="Self.repeat" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Teams" EntityType="Self.Team" />
+    <EntitySet Name="types" EntityType="Self.type" />
+    <EntitySet Name="User_as_guest" EntityType="Self.User_as_guest" />
+    <EntitySet Name="User_reg" EntityType="Self.User_reg" />
+    <EntitySet Name="User_Type" EntityType="Self.User_Type" />
+    <EntitySet Name="videos" EntityType="Self.video" />
+    <AssociationSet Name="FK_Blog_item_tofile_Blog_item" Association="Self.FK_Blog_item_tofile_Blog_item">
+      <End Role="Blog_item" EntitySet="Blog_item" />
+      <End Role="Blog_item_tofile" EntitySet="Blog_item_tofile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_item_tofile_Files" Association="Self.FK_Blog_item_tofile_Files">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="Blog_item_tofile" EntitySet="Blog_item_tofile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_categories_main_news_videos" Association="Self.FK_categories_main_news_videos">
+      <End Role="videos" EntitySet="videos" />
+      <End Role="categories_main_news" EntitySet="categories_main_news" />
+    </AssociationSet>
+    <AssociationSet Name="FK_videos_categories_main_news" Association="Self.FK_videos_categories_main_news">
+      <End Role="categories_main_news" EntitySet="categories_main_news" />
+      <End Role="videos" EntitySet="videos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contact_User_Type" Association="Self.FK_Contact_User_Type">
+      <End Role="User_Type" EntitySet="User_Type" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_contents_User_Type" Association="Self.FK_contents_User_Type">
+      <End Role="User_Type" EntitySet="User_Type" />
+      <End Role="contents" EntitySet="contents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Type_User_as_guest" Association="Self.FK_User_Type_User_as_guest">
+      <End Role="User_as_guest" EntitySet="User_as_guest" />
+      <End Role="User_Type" EntitySet="User_Type" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Type_User_reg" Association="Self.FK_User_Type_User_reg">
+      <End Role="User_reg" EntitySet="User_reg" />
+      <End Role="User_Type" EntitySet="User_Type" />
+    </AssociationSet>
+    <EntitySet Name="categories" EntityType="watcherModel.category" />
+    <EntitySet Name="C_News_category" EntityType="watcherModel.C_News_category" />
+    <AssociationSet Name="FKNews_category_type" Association="watcherModel.FKNews_category_type">
+      <End Role="type" EntitySet="types" />
+      <End Role="C_News_category1" EntitySet="C_News_category" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="C_News_category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dates" Type="DateTime" Precision="0" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pages" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="type_id" Type="Int32" Nullable="false" />
+    <Property Name="categoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="type" Relationship="watcherModel.FKNews_category_type" FromRole="C_News_category1" ToRole="type" />
+  </EntityType>
+  <Association Name="FKNews_category_type">
+    <End Type="watcherModel.type" Role="type" Multiplicity="1" />
+    <End Type="watcherModel.C_News_category" Role="C_News_category1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="C_News_category1">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

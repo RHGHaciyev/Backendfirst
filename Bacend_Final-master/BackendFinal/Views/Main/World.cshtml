@@ -1,0 +1,529 @@
+﻿@model IEnumerable<BackendFinal.Models.C_News_category>
+@using BackendFinal.Models;
+@{
+    ViewBag.Title = "World";
+}
+
+<body>
+    <div id="wrapper">
+        <!-- =============HEADER==================== -->
+        <header class="header margin-bottom-30">
+            <!-- =================BREAKING================ -->
+            <div class="bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 hidden-xs">
+                            <div class="breaking">
+                                <span>Qaynar Xəbərlər:</span>
+                                <p class='heading'>
+                                    <span id='dynamicText'></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="pull-right options">
+                                <a href="#" class="subscribe">Abunə ol</a>
+                                <span>|</span>
+                                <a href="#" class="login">Qeydiyyat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============WATCHER============= -->
+            <div class="clearfix"> </div>
+            <div class="watcher padding-vertical-10">
+                <div clsas="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 logo">
+                                <a href="index-2.html"><img src="~/Public/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9 nav-wrapper">
+                                <nav>
+                                    <ul class="sf-menu" id="menu">
+                                        <li>
+                                            <a href="http://localhost:52210/Main/HeadPage" class="green">Baş səhİfə <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Kateqorİya<i class="fa fa-angle-down"></i></a>
+                                            <ul class="animate">
+                                                <li><a href="http://localhost:52210/Main/Economy">İqtisadiyyat</a></li>
+                                                <li>
+                                                    <a href="entertaintment.html">Maraqlı <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <ul class="animate drop">
+                                                        <li><a href="http://localhost:52210/Main/Interesting">Şou</a></li>
+                                                        <li><a href="http://localhost:52210/Main/health">Sağlamlıq </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="http://localhost:52210/Main/Sport">İdman</a></li>
+                                                <li><a href="http://localhost:52210/Main/Social">Sosial</a></li>
+                                                <li><a href="http://localhost:52210/Main/World">Dünya</a></li>
+                                                <li><a href="http://localhost:52210/Main/Criminal">Kriminal</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="http://localhost:52210/Main/Team">Komanda <i class="fa fa-angle-down"></i></a>
+                                        </li>
+                                        <li><a href="http://localhost:52210/Main/Contact">Əlaqə</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===============MENU=============== -->
+            <div class="clearfix"> </div>
+        </header>
+        <!-- ===============.=======CONTENT================ -->
+        <div class="container margin-top-30">
+            <div class="row">
+                <!--======================PATH=========================-->
+                <div id="breadcrumbs" class="stuck_position margin-bottom-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="moduletable   col-sm-12">
+                                <div class="module_container">
+                                    <ul class="breadcrumb">
+                                        <li><a href="index-2.html" class="pathway">Baş səhifə</a></li>
+                                        <li><a href="index-2.html" class="pathway">Kateqoriya</a></li>
+                                        <li class="active"><span>Dünya</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=================LAYOUT-1===================-->
+                <div class="col-md-8 col-sm-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <h3 class="heading-1"><span>dünya</span></h3>
+                    <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="col-md-8 col-sm-7 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post1.html"><img src="~/Public/images/world/1.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post1.html">ABŞ-da təyyarə qəzası - ölənlər var</a></h4>
+                                <p>ABŞ-ın Corciya ştatında yüngülmotorlu təyyarə qəzaya uğrayıb. </p>
+                                <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-5 margin-bottom-30  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post2.html">Zukerberqin ikinci qızı oldu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post3.html">İranın keçmiş xarici işlər naziri Türkiyədə vəfat edib</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post4.html">Honkonqda güclü qasırğa </a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post5.html">ABŞ-ın Hyuston şəhərini su basdı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post6.html">Daha bir şəhər İŞİD-dən təmizləndi </a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                            <div class="layout_2--item row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-12  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <h4><a href="~/Public/Pages/page_world/post7.html">Bu ölkələrin adamları çox yaşayır</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="l2">
+                        </div>
+                    </div>
+                    <!--=================LAYOUT-2===================-->
+                    <h3 class="heading-1"><span>baş xəbərlər</span></h3>
+                    <div class="layout_1 home4-masonry2 margin-bottom-50  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post8.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/8.jpg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>Putin ABŞ-dakı qalmaqallı səfiri geri çağırdı</h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post9.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/9.jpeg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>İspaniyada saxlanılan türk əsilli yazıçı şərti azadlığa buraxılıb</h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post10.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/10.jpeg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>Ərdoğanın çağırışı Avstriyanı narahat etdi</h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post11.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/11.jpeg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>Amerikalı aktyor vəfat etdi</h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post12.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/12.jpeg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>Konqoda torpaq sürüşməsi</h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_1--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <a href="~/Public/Pages/page_world/post13.html">
+                                        <div class="overlay  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <img src="~/Public/images/world/13.jpeg" class="img-responsive" alt="">
+                                        <div class="layout-detail padding-20  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <h5>İspaniyada növbəti terror </h5>
+                                            <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 27, 2016</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=================LAYOUT-3===================-->
+                    <h3 class="heading-1"><span>son xəbərlər</span></h3>
+                    <!-- ===============.=======Slider-3================ -->
+                    <div id="owl-three" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_world/post14.html"><img src="~/Public/images/world/15.jpg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_world/post14.html">Gürcüstanda vertolyot suya düşüb</a></h4>
+                                        <p>
+                                            Vertolyotun düşdüyü əraziyə Azərbaycan yanğınsöndürmə briqadası...
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_world/post15.html"><img src="~/Public/images/world/14.jpg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_world/post15.html">"Türk ulduzları" Moskva səmasını fəth etdi</a></h4>
+                                        <p>
+                                            Türkiyə Hərbi Hava Qüvvələrinin “Türk ulduzları” yüksək pilotaj qrupu Moskva səmasında
+                                            nümunəvi uçuşlar həyata keçiriblər.
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row margin-bottom-40  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_3--item  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="col-md-8  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                            <a href="~/Public/Pages/page_world/post16.html"><img src="~/Public/images/world/16.jpg" class="img-responsive" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <h4><a href="~/Public/Pages/page_world/post16.html">Paris turistlərin sayına görə rekord vurdu</a></h4>
+                                        <p>
+                                            Paris son 10 ildə turistlərin sayına görə rekord vurub...
+                                        </p>
+                                        <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="author">by Rana F.</span><span class="date">Sep. 28, 2016</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===============.=======End Slider-3================ -->
+                    <!--=================LAYOUT-4===================-->
+                    <div class="side-widget margin-bottom-60 margin-top-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1"><span>Başlıq</span></h3>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post25.html"><img src="~/Public/images/world/25.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post25.html">Hollandiyada işçilər girov götürülüb</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <span class="date">Sep. 28, 2016</span>
+                                    </div>
+                                </div>
+                                <hr class="l4 margin-top-15 margin-bottom-20">
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_world/post26.html"><img src="~/Public/images/world/26.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post26.html">Almaniyada 10 min insan təxliyyə olundu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                                <hr class="l4 margin-top-15 margin-bottom-20">
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_world/post27.html"><img src="~/Public/images/world/27.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post27.html">Şahzadə tətilə 300 çamadanla getdi</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                                <hr class="l4 margin-top-15 margin-bottom-20">
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 video2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post28.html"><img src="~/Public/images/world/28.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post28.html">Polşada fırtına</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                                <hr class="l4 margin-top-15 margin-bottom-20">
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_world/post29.html"><img src="~/Public/images/world/29.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post29.html">Dünyada ən çox maaş hansı şəhərdədir?</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <a href="~/Public/Pages/page_world/post30.html"><img src="~/Public/images/world/30.jpeg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-30"><a href="~/Public/Pages/page_world/post30.html">Narkotik satan 75 yaşlı nənə və nəvəsi tutuldu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-md-4 col-sm-4">
+                    <!--====================LAYOUT-ASIDE_1-======================-->
+                    <div class="ads ad-300 margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h3 class="heading-1"><span>Elan</span></h3>
+                        <img src="~/Public/images/Add/300x250.jpg" class="img-responsive" alt="">
+                    </div>
+                    <!--====================LAYOUT-ASIDE_2-======================-->
+                    <div class="side-widget margin-bottom-60  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post17.html"><img src="~/Public/images/world/17.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post17.html">Latviyada çadra qadağan olunur</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post18.html"><img src="~/Public/images/world/18.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post17.html">İraqda iki gəmi toqquşub, ölənlər var</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post19.html"><img src="~/Public/images/world/19.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post19.html">Daşqınlar 700 can aldı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post20.html"><img src="~/Public/images/world/20.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post20.html">ABŞ-da mitinqdə 27 nəfər saxlanıldı</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post21.html"><img src="~/Public/images/world/21.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post21.html">Londonda hava limanında partlayış</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post22.html"><img src="~/Public/images/world/22.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post22.html">Suriyada “MiQ-21” vuruldu</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post23.html"><img src="~/Public/images/world/23.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post23.html">Nyu-Yorkda Tramp əleyhinə aksiya keçirilir</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="layout_2--item margin-bottom-5  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                    <div class="thumb  fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                        <div class="icon-24 gallery2  fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+                                        <a href="~/Public/Pages/page_world/post24.html"><img src="~/Public/images/world/24.jpg" class="img-responsive" alt=""></a>
+                                    </div>
+                                    <h4 class="margin-top-10"><a href="~/Public/Pages/page_world/post24.html">Hansı ölkədə nə qədər nüvə silahı var?</a></h4>
+                                    <div class="meta  fadeIn" style="visibility: visible; animation-name: fadeIn;"><span class="date">Sep. 28, 2016</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====================LAYOUT-ASIDE_SOCIAL======================-->
+                    <div class="side-widget margin-bottom-60">
+                        <h3 class="heading-1"><span>sosial şəbəkə</span></h3>
+                        <div class="social">
+                            <div class="share s_facebook">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="share s_linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                            <div class="share s_plus">
+                                <i class="fa fa-google-plus"></i>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!--====================LAYOUT-ASIDE_3======================-->
+                    <div class="side-widget margin-bottom-30 animated" style="visibility: visible;">
+                        <h3 class="heading-1"><span>yeni</span></h3>
+                        <ul class="trending-text">
+                            <li>
+                                <em>1</em>
+                                <p><a href="~/Public/Pages/page_world/post31.html">Ağcaqanad dişləyən qadın amputasiya edildis</a><span>Sep 26, 2016</span></p>
+                            </li>
+                            <li>
+                                <em>2</em>
+                                <p><a href="~/Public/Pages/page_world/post32.html">Rusiyada almaz mədənini su basdı</a> <span>Sep 26, 2016</span></p>
+                            </li>
+                            <li>
+                                <em>3</em>
+                                <p><a href="~/Public/Pages/page_world/post33.html">Tailandda musson yağışları can aldı </a> <span>Sep 26, 2016</span></p>
+                            </li>
+                            <li>
+                                <em>2</em>
+                                <p><a href="~/Public/Pages/page_world/post34.html">Meksikada atışma </a> <span>Sep 26, 2016</span></p>
+                            </li>
+                            <li>
+                                <em>5</em>
+                                <p><a href="~/Public/Pages/page_world/post35.html">Qatar relsdən çıxaraq evlərə çırpıldı</a> <span>Sep 26, 2016</span></p>
+                            </li>
+                            <li>
+                                <em>6</em>
+                                <p><a href="~/Public/Pages/page_world/post36.html">Sinaburq vulkanı yenidәn fәallaşdı</a> <span>Sep 26, 2016</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
